@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="" content="UTF-8">
+    <title>tesT</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            divisor: 10,
+            remainder: function(value) {
+                return value % this.divisor;
+            }
+        };
+
+        var number = [12, 3, 6, 78, 990];
+
+        var result = number.map(obj.remainder, obj);
+
+        alert(result);
+    </script>
+</body>
+
+</html>
