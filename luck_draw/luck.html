@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+        }
+        
+        #hd {
+            position: absolute;
+            width: 465px;
+            left: 450px;
+            top: 100px;
+        }
+        
+        div {
+            line-height: 150px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: ''Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
+        }
+        
+        #hd div {
+            width: 150px;
+            height: 150px;
+            margin: 0 5px 5px 0;
+            background-color: #ccc;
+            border: 1px solid #666;
+            border-radius: 50%;
+            float: left;
+        }
+        
+        #box {
+            width: 150px;
+            height: 150px;
+            margin: 0 5px 5px 0;
+            position: absolute;
+            left: 155px;
+            top: 155px;
+            background-color: red;
+            border-radius: 100%;
+        }
+        
+        .txt {
+            color: #fff;
+            font-size: 14px;
+            font-family: ''Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="txt">注：首次抽奖点击“开始抽奖”，连续抽奖则直接点击当前所在位置即可</p>
+    <div class="wrap">
+        <div id="hd">
+            <div style='background:url(img/915150029.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392089854.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392109816.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392129425.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392183289.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392161065.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392168737.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392143960.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <div style='background:url(img/mmexport1470392177048.jpg) no-repeat center center;background-size: 100% auto; '></div>
+            <span id="box">点击抽奖</span>
+        </div>
+    </div>
+
+    <script>
+        var oHd = document.getElementById('hd');
+        var oBox = document.getElementById('box');
+        var oDiv = oHd.getElementsByTagName('div');
+        var aRrContent = ['醉了醉了，美了美了', '你这运气不要不要的', '要不你请我吃顿饭吧', '想啥呢', '还真想中奖呀', '安静的呆着吧！好么！', '亲爱的就带到这吧！', '我懂你！不过真的没有奖呀！', '看情况你是不想停下来是吧', '“爷”，下一次可能会中奖！！！']
+        var aImg = ['img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg', 'img/424837165.jpg']
+        var i = 0,
+            time;
+        oBox.onclick = function() {
+            clearInterval(time);
+            oBox.style.opacity = 0;
+            time = setInterval(function() {
+                i++;
+                for (var j = 0; j < oDiv.length; j++) {
+                    console.log('----------------------------' + j);
+                    oDiv[j].style.background = 'aqua';
+                }
+                console.log('================================' + j);
+                f = parseInt(Math.random() * j);
+                oDiv[f].style.background = 'url(' + aImg[f] + ') no-repeat center center';
+                oDiv[f].style.backgroundSize = '100% auto';
+                if (i == 50) {
+                    clearInterval(time);
+                    i = 0;
+                    oBox.style.left = oDiv[f].offsetLeft + 'px';
+                    oBox.style.top = oDiv[f].offsetTop + 'px';
+                    oBox.style.opacity = 0;
+                    time = setInterval(function() {
+                        console.log('++++++++++++++++++++++++++++' + f)
+                            //alert('恭喜' + oDiv[f].innerHTML);
+                        alert(aRrContent[f]);
+                        clearInterval(time);
+                    }, 500)
+                }
+            }, 200)
+        }
+    </script>
+</body>
+
+</html>
