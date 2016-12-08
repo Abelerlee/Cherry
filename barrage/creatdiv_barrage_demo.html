@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+        }
+        
+        div {
+            font-family: 微软雅黑;
+            font-size: 20px;
+            height: 40px;
+            width: 300px;
+            padding: 3px;
+        }
+    </style>
+
+    <script>
+        function Danmu(connect, color, left, top) {
+            var textconnect = connect;
+            var textcolor = color;
+            var oVerWidth = document.body.clientWidth;
+            var div = document.createElement('div');
+            div.style.position = "absolute";
+            div.innerHTML = textconnect;
+            div.style.color = textcolor;
+            div.style.left = left + 'px';
+            div.style.top = top + 'px';
+            document.body.appendChild(div);
+            console.log(oVerWidth);
+            this.draw = function() {
+                var timer = null;
+                timer = setInterval(function() {
+                        div.style.left = div.offsetLeft + 5 + "px"
+                        if (parseInt(div.style.left) >= 1000) {
+                                div.parentNode.removeChild(div);
+                            }
+                        }, 30)
+                }
+            }
+
+            function getRandomColor() {
+                return '#' + (Math.random() * 0xffffff << 0).toString(16);
+            }
+            window.onload = function() {
+                var words = ['老板，钱对你来说真的就那么重要吗?讲了三个多小时了一分钱都不降?', '工作，退一步海阔天空，爱情，退一步人去楼空。', '天哪，我的衣服又瘦了!', '挣钱是一种能力，花钱是一种技术，我能力有限，但技术相当牛逼。', '世界上最专一的就是身上的肉肉，你再怎么冷落它，它依然对你不离不弃', '我最喜欢喜欢老师上课上着上着跑题了，然后聊开了，然后下课了', '他们都说这个世界危险，我不怕!因为我长得就很安全。', '特别能吃苦”这五个字我想了想只做到了前四个。', '人生就像放电影，搞不好就缓冲失败。', '.我会一直把你捧在手上，最后合起了手掌，我憋不死你!', '将薪比薪的想一下，算了，不想活了。', '国庆假期就这么过去了，也该收收心准备。过年了', '与昨天老死不相往来，与明天执手天荒地老。', '思来想去还是觉得你的名字跟，我爱你，放在一起更合适。', '请你以后不要在我面前说英文了，OK?'];
+                setInterval(function() {
+                    new Danmu(words[Math.floor(Math.random() * words.length)], getRandomColor(), Math.random() * 50, Math.random() * 600).draw();
+                }, 1000)
+            }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

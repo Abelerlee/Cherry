@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5文字弹幕效果代码</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+        }
+        
+        body {
+            background: #bcbcbc;
+        }
+        
+        .main {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .main img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+        }
+        
+        #canvas {
+            display: block;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <canvas id="canvas">嗨您的浏览器不支持canvas赶紧去升级吧</canvas>
+    </div>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext("2d");
+        var width = 600;
+        var height = 400;
+        var colorArr = ["yellow", "pink", "orange", "red", "green"];
+        var textArr = [
+            "今天斗地主有人来不，有没有啊！！！",
+            "谁想请我吃法，我可以为你放下手里的工作哦！",
+            "心情不美咋办？",
+            "设计做的好不好，关键看你怎么抄",
+            "我美了美了，我醉了醉了！！！",
+            "我睡了，你们好好玩",
+            "起来不愿做奴隶的人们，把我们的血肉铸成的长城"
+        ]
+        canvas.width = width;
+        canvas.height = height;
+
+        //var image = new Image();
+        ctx.font = "20px Courier New";
+        var numArrL = [80, 100, 5, 30, 300, 500, 430]; //初始的X
+        var numArrT = [80, 100, 20, 50, 300, 380, 210]; //初始的Y
+        setInterval(function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            for (var j = 0; j < textArr.length; j++) {
+                numArrL[j] -= (j + 1) * 1;
+                ctx.fillStyle = colorArr[j]
+                ctx.fillText(textArr[j], numArrL[j], numArrT[j]);
+            }
+            for (var i = 0; i < textArr.length; i++) {
+                if (numArrL[i] <= -500) {
+                    numArrL[i] = canvas.width;
+                }
+            }
+            ctx.restore();
+        }, 30)
+    </script>
+    <div style="text-align:center;"></div>
+</body>
+
+</html>
