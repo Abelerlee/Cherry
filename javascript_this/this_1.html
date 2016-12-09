@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button value='点击' onclick="foo()"></button>
+    <script>
+        var foo = function() {
+            alert(this.value);
+        }
+
+        //example 
+        var obj = {
+            x: 20,
+            f: function() {
+                console.log(this.x);
+            }
+        }
+        obj.f(); //20
+    </script>
+</body>
+
+</html>
