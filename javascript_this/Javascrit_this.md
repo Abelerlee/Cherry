@@ -17,3 +17,7 @@
             console.log(this.x); //thi是指向的是window
         }
         foo(); //30
+3 this 指向利用call和apply所指派给this的物件
+    call、apply方法是ECMAscript在第三版中给予的函数
+4.this指向new 所产生的新物件
+    

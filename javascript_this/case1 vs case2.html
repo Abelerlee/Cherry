@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        /* var x = 10;
+                                                                        var obj = {
+                                                                             x: 20,
+                                                                             f: function() {
+                                                                             console.log(+this.x);
+                                                                             var foo = function() {
+                                                                                    console.log(this.x);
+                                                                                 }
+                                                                                    foo(); //10
+                                                                             }
+                                                                        }
+                                                                        obj.f(); //20 */
+
+
+        /* var x = 10;
+         var obj = {
+             x: 20,
+             f: function() {
+                 console.log(+this.x);
+                 var that = this
+                     //console.log(this);
+                 var foo = function() {
+                     console.log(that.x);
+                     //console.log(this);
+                 }
+                 foo(); //10
+             }
+         }
+         obj.f(); //20  */
+
+        var x = 10;
+        var obj = {
+            x: 20,
+            f: function() {
+                console.log(this.x);
+            }
+        }
+        obj.f();//20
+
+        var foo = obj.f;
+        foo();//10
+
+        var obj2 = {
+            x: 30,
+            m: obj.f
+        }
+        obj2.m();//30
+    </script>
+</body>
+
+</html>
