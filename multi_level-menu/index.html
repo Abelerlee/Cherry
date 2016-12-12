@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <script type="text/javascript" language="javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(function() {
+            //层级菜单点击效果
+            //没有子菜单的选项样式
+            $("#js_list").find("li").not(":has(ul)").children("a").css("color", "#333");
+            $("#js_list").find("li").has("ul").find("a:first").css("background", "url(images/iocn_arrow_01.gif) no-repeat left center");
+            $("#js_list").find("li").has("ul").find("ul").css("display", "none");
+            //有子菜单的选项样式及点击操作
+            $("#js_list").find("li:has(ul)").children("a").css("color", "#F30").click(function() {
+                //如果当前菜单的下一个紧邻同辈节点被隐藏
+                if ($(this).next("ul").is(":hidden")) {
+                    //那么，显示它
+                    $(this).next("ul").slideDown("fast");
+                    //如果当前菜单的同级其他菜单显示了子菜单
+                    if ($(this).parent("li").siblings("li").children("ul").is(":visible")) {
+                        //那么，隐藏它
+                        $(this).parent("li").siblings("li").find("ul").slideUp("fast");
+                        //当前菜单的同级菜单(有子菜单的)的样式，以及子菜单的样式
+                        $(this).parent("li").siblings("li:has(ul)").children("a").css("background", "url(images/iocn_arrow_01.gif) no-repeat left center").end().find("li:has(ul)").children("a").css("color", "#F60");
+                        //当前选中菜单的样式
+                        $(this).css("background", "url(images/iocn_arrow_02.gif) no-repeat left center");
+                        return false;
+                    } else {
+                        $(this).css("background", "url(images/iocn_arrow_02.gif) no-repeat left center");
+                    }
+                } else {
+                    //否则，点击当前菜单，隐藏当前菜单
+                    $(this).next("ul").slideUp("fast");
+                    //当前菜单样式
+                    $(this).css("background", "url(images/iocn_arrow_01.gif) no-repeat left center");
+                    //当前菜单的子菜单的样式
+                    $(this).next("ul").find("li:has(ul)").children("a").css("color", "#F30");
+                    //当前菜单的之菜单的子菜单淡出隐藏
+                    $(this).next("ul").children("li").find("ul").fadeOut("fast");
+                    return false;
+                }
+            });
+
+        });
+    </script>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font: normal 20px normal;
+        }
+        
+        html,
+        body {}
+        
+        a {
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        ul {
+            background: #ccc;
+            padding: 20px 0 0 20px;
+        }
+        
+        li {
+            height: 40px;
+            line-height: 40px;
+            white-space: nowrap;
+        }
+        
+        li ul {
+            margin: 0 0 0 100px;
+        }
+        
+        a {
+            display: block;
+            padding: 0 0 0 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="js_list">
+        <li><a href="#">一级菜单</a></li>
+        <li><a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a>
+                    <ul>
+                        <li><a href="#">三级菜单</a></li>
+                        <li><a href="#">三级菜单</a></li>
+                        <li><a href="#">三级菜单</a></li>
+                        <li><a href="#">三级菜单</a>
+                            <ul>
+                                <li><a href="#">无限N级菜单</a></li>
+                                <li><a href="#">无限N级菜单</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+        <li><a href="#">一级菜单</a></li>
+        <li><a href="#">一级菜单</a></li>
+    </ul>
+</body>
+
+</html>
