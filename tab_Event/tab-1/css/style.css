@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,div,a{ margin:0px; padding:0px;}
+li{ list-style:none;}
+a{ color:#3c3c3c; text-decoration:none;}
+a:hover{ color:#ff4400;}
+body{ font-family:'宋体'; font-size:12px;}
+/*主要部分*/
+.qiehuan{ width:298px; height:98px; border:#eee 1px solid; margin:50px auto 0px;}
+.box_tit{ width:100%; overflow:hidden;/*溢出隐藏，截掉多余ul的宽度*/}
+.box_tit ul{ width:110%;/*宽度只要大于等300px即可*/ height:26px; border-bottom:#eee 1px solid; background:#f7f7f7; margin-left:-1px; _overflow:hidden;/*IE6兼容，让ul展现实际宽度高度，溢出隐藏*/}
+.box_tit ul li{ float:left; width:60px; height:26px; line-height:26px; text-align:center;}
+.box_tit ul li.current{ _position:relative;/*IE6认为relative层级很高，所以不受父元素的overflow:hidden;控制*/ border-left:#eee 1px solid; border-right:#eee 1px solid; width:58px; height:27px; background:#fff; font-weight:bold;}
+.box_ul{ margin:10px 0px 0px 19px; height:auto; overflow:hidden;/*清浮动*/}
+.box_ul li{ float:left; width:124px; height:25px; line-height:25px; padding-right:10px; overflow:hidden;/*溢出隐藏*/}
