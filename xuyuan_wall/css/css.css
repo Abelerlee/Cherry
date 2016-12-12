@@ -1,0 +1,231 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button,textarea{ padding:0;margin:0; outline-style:none;}
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+/***初始化****/
+body{background: url(../images/bg_main.jpg);}
+.close{
+	position: absolute;
+	width:29px;
+	height:24px;
+	background: url(../images/close.png) no-repeat -2px 0;
+	right:0;
+	bottom:0;
+}
+.close:hover{
+	background: url(../images/close.png) no-repeat -43px 0;
+}
+.top{
+	height:126px;
+	background:url(../images/top.jpg) no-repeat;
+}
+.mask{
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,.6);
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+.wish{
+	width:120px;
+	height:65px;
+	background: url(../images/send.png) no-repeat;
+	position: fixed;
+	left:600px;
+	top:20px;
+	z-index: 999;
+	cursor: pointer;
+	border: none;
+}
+.send_form{
+	position: absolute;
+	height:350px;
+	width:380px;
+	background-color:#FFFFFF;
+    left:600px;
+    top:80px;
+    z-index: 1001;
+    display: none;
+}
+.send_form .title{
+	height:56px;
+	background:url(../images/send-title.jpg) repeat-x;
+	text-align: center;
+	font-size: 22px;
+	position: relative;
+	cursor: move;
+}
+.title span{
+	line-height: 56px;
+}
+
+.wish_form{
+	margin-top: 18px;
+	padding-left: 12px;
+	font-size: 16px;
+}
+
+.wish_form #user{
+	display: block;
+	margin-top:10px;
+	margin-bottom: 18px;
+	width:240px;
+	height:34px;
+	border-radius: 5px 5px 5px 5px
+}
+.wish_form #content{
+	width:240px;
+	height:122px;
+	border-radius: 5px 5px 5px 5px
+}
+.wish_form .send{
+	position: absolute;
+	right:0;
+	bottom: 0;
+	margin-bottom: 8px;
+	margin-right: 2px;
+	width:120px;
+	height:50px;
+	background:url(../images/send-btn.png) no-repeat;
+	border: none;
+}
+.wish_form .phiz{
+	position: absolute;
+	left:2px;
+	top:310px;
+	width:240px;
+	border:1px solid #CCCCCC;
+	padding:4px 4px 4px 8px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    display: none;
+}
+.paper{
+	font-size: 12px;
+	width:240px;
+	position: absolute;
+}
+.paper .person{
+	cursor: move;
+ 	height: 68px;
+
+}
+.paper .txt{
+	margin-left: -2px;
+	width:240px;
+     color:silver;
+}
+.paper .username{
+    font-size: 13px;
+	float: left;
+	color: #3875D7;
+	padding-left: 25px;
+}
+
+.paper .num{
+	font-size: 13px;
+	float: left;
+	color: #3875D7;
+	padding-left: 100px;
+}
+.paper .content{
+	height:120px;
+     text-align: center;
+}
+.paper p{
+	width:180px;
+	margin:0 auto;
+	padding-top:40px;
+}
+
+.paper .bottom{
+	 margin-left: 1px;
+     height:68px;
+}
+.paper .bottom span{
+	position: absolute;
+	left:40px;
+	top:200px;
+	color:blue;
+}
+.paper .close{
+    left:180px;
+    top:200px;
+}
+.al{
+   left:10px;
+   top:20px;
+}
+.a1 .person{
+	background: url("../images/a1_1.gif") no-repeat;
+}
+.a1 .txt{
+    background: url(../images/a1_2.gif) repeat-y;
+}
+.a1 .bottom{
+	background: url("../images/a1_3.gif") no-repeat;
+}
+
+.a2{
+	top:40px;
+	left:260px;
+}
+.a2 .person{
+	background: url("../images/a2_1.gif") no-repeat;
+}
+.a2 .txt{
+    background: url(../images/a2_2.gif) repeat-y;
+}
+.a2 .bottom{
+	background: url("../images/a2_3.gif") no-repeat;
+}
+
+
+.a3{
+	top:100px;
+	left:560px;
+}
+.a3 .person{
+	background: url("../images/a3_1.gif") no-repeat;
+}
+.a3 .txt{
+    background: url(../images/a3_2.gif) repeat-y;
+}
+.a3 .bottom{
+	background: url("../images/a3_3.gif") no-repeat;
+}
+
+
+.a4{
+	top:200px;
+	left:860px;
+}
+.a4 .person{
+	background: url("../images/a4_1.gif") no-repeat;
+}
+.a4 .txt{
+    background: url(../images/a4_2.gif) repeat-y;
+}
+.a4 .bottom{
+	background: url("../images/a4_3.gif") no-repeat;
+}
+
+.a5{
+	top:250px;
+	left:1160px;
+}
+.a5 .person{
+	background: url("../images/a5_1.gif") no-repeat;
+}
+.a5 .txt{
+    background: url(../images/a5_2.gif) repeat-y;
+}
+.a5 .bottom{
+	background: url("../images/a5_3.gif") no-repeat;
+}
