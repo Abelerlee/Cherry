@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+
+		.rotateImg{    
+            width:100px;
+            height:100px;
+            margin: 0 auto;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -webkit-transition: -webkit-transform 0.2s ease-out;
+            -moz-transition: -moz-transform 0.2s ease-out;
+            -o-transition: -o-transform 0.2s ease-out;
+            -ms-transition: -ms-transform 0.2s ease-out;
+        }
+       /* .rotateImg:hover{
+            width: 200px;
+            height: 200px;
+            animation: aa 1s both;
+        }
+        @keyframe aa{
+            0%{transform:rotateZ(0deg);}
+            100%{transform:rotateZ(90deg);}
+        }*/
+        .rotateImg:hover {
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+        }
+	</style>
+</head>
+<body>
+	<img src="1205501.png" class="rotateImg" />
+</body>
+</html>

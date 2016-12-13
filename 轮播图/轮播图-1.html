@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>京东轮播图</title>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		.out{border: 2px solid #000; margin: 50px auto;width: 730px;height: 450px; position: relative;}
+		.out .img li{position: absolute; top:0;left: 0}
+		.out .num{position: absolute; bottom: 20px;left: 0;font-size: 0px; text-align: center; width: 100%;}
+		.out .num li{width: 20px; height: 20px;background: #666;color: #fff;text-align: center;line-height: 20px;border-radius: 50%; display: inline-block;font-size: 16px; margin: 0 10px; cursor: pointer;}
+		.out .num li.active{background:#b61b1f;}
+		.out .btn{position: absolute; margin-top: -30px; top:50%; width: 30px; height: 60px; background: rgba(0,0,0,0.5); color: #fff; text-align: center; line-height: 60px; font-size: 40px; display: none; cursor:pointer;}
+		.out:hover .btn{display: block;}
+		.out .left{left: 0}
+		.out .right{right: 0}
+
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		//代码初始化
+		var size=$(".img li").size();
+
+		for(var i=1;i<=size;i++){
+			var li="<li>"+i+"</li>";
+			$(".num").append(li);
+		}
+
+
+		//手动控制轮播图
+		$(".img li").eq(0).show();
+		$(".num li").eq(0).addClass("active");
+		$(".num li").mouseover(function(){
+			$(this).addClass("active").siblings().removeClass("active");
+			var index=$(this).index();
+			i=index;
+			$(".img li").eq(index).stop().fadeIn(300).siblings().stop().fadeOut(300);
+		})
+
+		//自动轮播
+		var i=0;
+		var timer=setInterval(moveR,2000);
+		//核心向右运动函数
+		function moveR(){
+			i++;
+			if (i==size){
+				i=0;
+			};
+			$(".num li").eq(i).addClass("active").siblings().removeClass("active");
+			$(".img li").eq(i).fadeIn(300).siblings().fadeOut(300);
+		}
+
+		//核心向左运动函数
+		function moveL(){
+			i--;
+			if (i==-1){
+				i=size-1;
+			};
+			$(".num li").eq(i).addClass("active").siblings().removeClass("active");
+			$(".img li").eq(i).fadeIn(300).siblings().fadeOut(300);
+		}
+
+		//z左按钮
+		$(".out .left").click(function(){
+			moveL();
+		})
+		//右按钮
+		$(".out .right").click(function(){
+			moveR();
+		})
+
+		//定时器的开关
+		$(".out").hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer=setInterval(moveR,2000);
+		})
+
+	})
+	</script>
+</head>
+</head>
+<body>
+	<div class="out">
+		<ul class="img">
+			<li><a href="#"><img src="http://img10.360buyimg.com/da/jfs/t2254/257/1233508438/130074/e024ce7a/568b8b0aN080955e2.jpg"></a></li>
+			<li><a href="#"><img src="http://img20.360buyimg.com/da/jfs/t2041/332/1908324274/98211/3bf21bd3/568b3053N86d1033f.jpg"></a></li>
+			<li><a href="#"><img src="http://img11.360buyimg.com/da/jfs/t2044/138/1891534165/101375/1681f117/568b9ff0N22638d4a.jpg"></a></li>
+			<li><a href="#"><img src="http://img12.360buyimg.com/da/jfs/t2455/69/1946701514/101100/8ffdf339/56839548Nca1b1f56.jpg"></a></li>
+			<li><a href="#"><img src="http://img13.360buyimg.com/da/jfs/t2482/274/1264276397/87792/dc5fb390/568b7b35N4baf621e.jpg"></a></li>
+		</ul>
+
+		<ul class="num">
+			
+		</ul>
+
+		<div class="left btn"><</div>
+		<div class="right btn">></div>
+	</div>
+</body>
+</html>

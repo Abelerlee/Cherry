@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{ font-size:12px; font-family:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; font-size:100%;}
+li{ list-style:none;}
+input,setlect,textarea{outline:none;}
+textarea{ outline:none;}
+a {text-decoration:none;}
+.fl{float:left;}
+.fr{float:right;}
+/*清除浮动*/
+.clearfix:after{ content:"."; display:block; clear:both; font-size:0; height:0; line-height:0;}
+.clearfix{ zoom:1;}
+div{ width:200px; height:200px;}
+.div1{ top:50%; left:50%; margin-left:-100px;margin-top:-100px; position:absolute; transform-style: preserve-3d;}
+.div1:hover{ 
+animation: myfirst 5s linear 0s infinite alternate;
+/* Firefox: */
+-moz-animation: myfirst 5s linear 0s infinite alternate;
+/* Safari 和 Chrome: */
+-webkit-animation: myfirst 5s linear 0s infinite alternate;
+/* Opera: */
+-o-animation: myfirst 5s linear 0s infinite alternate;
+}
+
+@keyframes myfirst
+{
+10%   {transform:rotate(-45deg) rotateX(45deg) rotateY(45deg);}
+100% {transform:rotate(-45deg) rotateX(720deg) rotateY(720deg);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+10%   {transform:rotate(-45deg) rotateX(45deg) rotateY(45deg);}
+100% {transform:rotate(-45deg) rotateX(720deg) rotateY(720deg);}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+10%   {transform:rotate(-45deg) rotateX(45deg) rotateY(45deg);}
+100% {transform:rotate(-45deg) rotateX(720deg) rotateY(720deg);}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+10%   {
+    transform:rotate(-45deg) rotateX(45deg) rotateY(45deg);
+}
+.div1 div{
+    position:absolute;
+}
+#div1 {
+    background:#909090;
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+#div2 {
+    background:#ff0000;
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+
+#div3 {
+    background:#E6EC17;
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: top left;
+}
+
+#div4 {
+    background:#0AFD53;
+    transform: rotateX(-90deg) translateY(-100px);
+    transform-origin: top center;
+}
+
+#div5 {
+    background:#05F7FB;
+    transform: rotateX(90deg) translateY(100px);
+    transform-origin: bottom center;
+}
+
+#div6 {
+    background:#F502FC;
+    transform: translateZ(100px)  rotateY(180deg);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="div1 animated">
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<div id="div5"></div>
+	<div id="div6"></div>
+</div>
+
+</body>
+</html>

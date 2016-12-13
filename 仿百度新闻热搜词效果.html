@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿百度新闻热搜词</title>
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<style>
+	body,ul,li,a{margin: 0; padding: 0;}
+	.ul_resou{width: 560px;overflow: hidden;margin: 0 auto;font-family: "微软雅黑","Hiragino Sans GB";margin-top: 100px;}
+	.ul_resou li{list-style: none;float: left;margin-right: 2px;margin-bottom: 2px;font-size: 14px;text-align: center;position: relative;overflow: hidden;}
+	.ul_resou li.li_color_0{background: #0DA4D6;}
+	.ul_resou li.li_color_1{background: #35C4EF;}
+	.ul_resou li.li_1{width: 138px;height: 68px;}
+	.ul_resou li.li_2{width: 68px;height: 68px;}
+	.ul_resou li.li_3{font-size: 16px;font-weight: bold;}
+	a{text-decoration: none;display: block;color: #FFF;padding: 2px;padding-top: 14px;line-height: 18px;}
+	a.hotwords_li_a{padding-top: 5px;}
+	a.a_1{}
+	a.a_2{padding-top: 5px;position: absolute;height: 68px;left: 0px;top: 68px;background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);}
+	a.a_3{width: 134px;height: 64px;}
+	a.a_4{width: 64px;height: 64px;}
+	</style>
+	<script>
+	$(function(){
+		$(".ul_resou li").hover(function(){
+			$(this).children("a:last").stop().animate({top:"0px"},200);
+		},function(){
+			$(this).children("a:last").stop().animate({top:"68px"},200);
+		})
+	})
+	</script>
+</head>
+<body>
+	<ul class="ul_resou">
+		<li class="li_1 li_3 li_color_0">
+			<a href="#" target="_blank" title="习近平查看鲁甸遗址" class="a_1">习近平查看鲁甸遗址</a>
+			<a href="#" target="_blank" title="习近平查看鲁甸遗址" class="a_2 a_3">习近平查看鲁甸遗址</a>
+		</li>
+		<li class="li_2 li_color_1">
+			<a href="#" target="_blank" title="李克强赴瑞士" class="a_1">李克强赴瑞士</a>
+			<a href="#" target="_blank" title="李克强赴瑞士" class="a_2 a_4">李克强赴瑞士</a>
+		</li>
+		<li class="li_2 li_color_0">
+			<a href="#" target="_blank" title="大盘暴跌后反弹" class="a_1">大盘暴跌后反弹</a>
+			<a href="#" target="_blank" title="大盘暴跌后反弹" class="a_2 a_4">大盘暴跌后反弹</a>
+		</li>
+		<li class="li_1 li_3 li_color_1">
+			<a href="#" target="_blank" title="令计划被免政协职务" class="a_1">令计划被免政协职务</a>
+			<a href="#" target="_blank" title="令计划被免政协职务" class="a_2 a_3">令计划被免政协职务</a>
+		</li>
+		<li class="li_2 li_color_0">
+			<a href="#" target="_blank" title="3D打印建筑亮相苏州" class="a_1 hotwords_li_a">3D打印建筑亮相苏州</a>
+			<a href="#" target="_blank" title="3D打印建筑亮相苏州" class="a_2 a_4">3D打印建筑亮相苏州</a>
+		</li>
+		<li class="li_2 li_color_1">
+			<a href="#" target="_blank" title="咏春高手回应遭暴打" class="a_1 hotwords_li_a">咏春高手回应遭暴打</a>
+			<a href="#" target="_blank" title="咏春高手回应遭暴打" class="a_2 a_4">咏春高手回应遭暴打</a>
+		</li>
+		<li class="li_2 li_color_0">
+			<a href="#" target="_blank" title="男子被利箭射中膝盖" class="a_1 hotwords_li_a">男子被利箭射中膝盖</a>
+			<a href="#" target="_blank" title="男子被利箭射中膝盖" class="a_2 a_4">男子被利箭射中膝盖</a>
+		</li>
+		<li class="li_2 li_color_1">
+			<a href="#" target="_blank" title="土豪开豪车盗猎" class="a_1 hotwords_li_a">"土豪"开豪车盗猎</a>
+			<a href="#" target="_blank" title="土豪开豪车盗猎" class="a_2 a_4">"土豪"开豪车盗猎</a>
+		</li>
+		<li class="li_1 li_3 li_color_0">
+			<a href="#" target="_blank" title="中央严把教师政治关" class="a_1">中央严把教师政治关</a>
+			<a href="#" target="_blank" title="中央严把教师政治关" class="a_2 a_3">中央严把教师政治关</a>
+		</li>
+		<li class="li_2 li_color_1">
+			<a href="#" target="_blank" title="姚贝娜追悼会" class="a_1">姚贝娜追悼会</a>
+			<a href="#" target="_blank" title="姚贝娜追悼会" class="a_2 a_4">姚贝娜追悼会</a>
+		</li>
+		<li class="li_2 li_color_0">
+			<a href="#" target="_blank" title="中国总人口13.6亿" class="a_1">中国总人口13.6亿</a>
+			<a href="#" target="_blank" title="中国总人口13.6亿" class="a_2 a_4">中国总人口13.6亿</a>
+		</li>
+		<li class="li_1 li_3 li_color_1">
+			<a href="#" target="_blank" title="高速免费时间确定" class="a_1">高速免费时间确定</a>
+			<a href="#" target="_blank" title="高速免费时间确定" class="a_2 a_3">高速免费时间确定</a>
+		</li>
+	</ul>
+</body>
+</html>
