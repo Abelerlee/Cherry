@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.text1,
+			.text2 {
+				width: 500px;
+				height: 300px;
+				border: 10px solid lightblue;
+				float: left;
+				font-size: 20px;
+			}
+			
+			.div {
+				display: inline-block;
+				margin: 10px 20px;
+				height: 300px;
+				width: 200px;
+				border: 1px solid red;
+				text-align: center;
+				float: left;
+			}
+			
+			.li1 {
+				float: left;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: #666666;
+				margin-right: 10px;
+				line-height: 40px;
+			}
+			
+			.li1.on {
+				background: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<textarea class="text1"></textarea>
+			<div class="div">
+				<div>
+					<button style="font-size: 20px; border: none;background: #ff6600;height: 50px;">GOOOOOOOO</button>
+				</div>
+				<ul style="overflow: hidden;width: 180px;margin-left: -20px;">
+					<li class="li1"></li>
+					<li class="li1"></li>
+					<li class="li1 on"></li>
+					<li class="li1"></li>
+					<li class="li1"></li>
+					<li class="li1"></li>
+				</ul>
+				<span id="num1">xx</span>/<span id="num2">xx</span>
+			</div>
+			<textarea class="text2" type="text"></textarea>
+
+		</div>
+		<script src="../jq-version/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('button').click(function() {
+				var i = 0;
+				var text='';
+				var timer = setInterval(function() {
+					if (i > $('.text1').val().length - 1) {
+						clearInterval(timer);
+					}
+					$('.li1').removeClass('on');
+					$('.li1:nth-child(' + i % 7 + ')').addClass('on');
+					$('#num1').text(i);
+					text=$('.text1').val().substring(i, 1);
+					console.log(text+'_____'+i);
+					$('.text2').html(text);
+					i++;
+				}, 200);
+				$('#num2').text($('.text1').val().length);
+				
+			})
+			
+		</script>
+	</body>
+
+</html>
