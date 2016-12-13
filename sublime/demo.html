@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width" />
+        <title>Sublime Doing</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            img{
+                border:0;
+            }
+            ol, ul ,li{list-style: none;} 
+                .bg {
+                width:200px;
+                height:100px;
+                background: url(/folder/yourimage.png) no-repeat;
+                _background:none;
+                _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/folder/yourimage.png',sizingMethod='crop');
+            }
+            /* 1px gif method */
+            img, .png {
+                position: relative;
+                behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+                   this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+                   this.src = "images/transparent.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+                   this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+                   this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
+            }
+            a:link { color: blue; }
+            a:visited { color: purple; }
+            a:hover { color: red; }
+            a:active { color: yellow; }
+
+            html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, b, u, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, thead, tr, th, td,{
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+            ol, ul { list-style: none; }
+            img { border: 0;}
+
+            /* 这是一段注释，注释不会在浏览器中显示 */
+
+            .clearfix:before, .container:after { content: ""; display: table; }
+            .clearfix:after { clear: both; }
+            /* IE 6/7 */
+            .clearfix { zoom: 1; }
+
+            .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+            .clearfix { display: inline-block; }
+            html[xmlns] .clearfix { display: block; }
+            * html .clearfix { height: 1%; }
+            
+                 
+                 
+        </style>
+        <style type="text/css"></style>
+        <script type="text/javascript"></script>
+        <script type="text/javascript" src=""></script>
+
+    </head>
+    <body>
+    <!--这是一段注释，注释不会在浏览器中显示-->
+        <!--[if lte IE 8]>
+            IE8及其以下的版本可见
+        <![endif]-->
+        <!--[if lte IE 6]>
+            IE6及其以下版本可见
+        <![endif]-->
+        
+             <footer>
+                  <p>Copyright © 2008-2012 bluesdream.com</p>
+                  <p>增值电信业务经营许可证 沪B2- <a href="#">沪ICP备号</a></p>
+             </footer>
+            
+             
+    </body>
+</html>
