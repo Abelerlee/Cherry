@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+    <meta charset="UTF-8" />
+    <title>Document</title>
+<style>  
+li{  
+    width:50px;  
+    height:30px;  
+    margin:5px;  
+    float:left;  
+    text-align: center;  
+    line-height: 30px;  
+    border-radius:4px;  
+    list-style-type: none;  
+    background: red;  
+    cursor:pointer;  
+}  
+</style>  
+<script>  
+window.onload=function(){ 
+    var oli=document.getElementsByTagName('li'); 
+
+    //方法一 
+    /*for(var i=0; i<oli.length;i++)  
+    {     
+        oli[i].index=i; 
+        oli[i].onclick=function(){ 
+        this.style.setProperty("background", '#ccc'); 
+        alert('你点击的列表的下标是：'+this.getAttribute("data-index"));//列表下标从0开始  
+            };  
+    }  */ 
+
+    // 方法二
+    /*for(var i=0;i<oli.length;i++)  
+        {  
+            oli[i].onclick=(function(n){  
+                return function(){  
+                    console.log(n);  
+                }  
+            })(i)  
+    }*/  
+
+    //方法三  
+    for(var i=0;i<oli.length;i++){  
+            (function(n){  
+                oli[i].onclick=function(){  
+                    alert(n);  
+                }  
+            })(i)  
+    }  
+ 
+};  
+</script>  
+<head>  
+        <body>  
+            <div>  
+                <ul>  
+                    <li data-index = '1'>列表1</li>  
+                    <li data-index = '2'>列表2</li>  
+                    <li data-index = '3'>列表3</li>  
+                    <li data-index = '4'>列表4</li>  
+                    <li data-index = '5'>列表5</li>  
+                </ul>           
+            </div>  
+              
+        </body>  
+</html>  

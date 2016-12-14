@@ -1,0 +1,48 @@
+/*分页*/
+.page-footer {
+    padding: 40px 0 20px;
+    text-align: center;
+    font-size: 0; }
+.page-footer span, .page-footer a, .page-footer input, .page-footer .disabled {
+    *display: inline;
+    *zoom: 1;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #dedede;
+    line-height: 36px;
+    font-size: 12px;
+    color: #a1a1a1; }
+.page-footer span {
+    border: none;
+    color: #999;
+    font-size: 14px; }
+.page-footer a, .page-footer .current {
+    margin: 0 3px;
+    width: 35px; }
+.page-footer .disabled, .page-footer .prevPage, .page-footer .nextPage {
+    width: 78px;
+    font-size: 14px;
+    color: #2f2f2f;
+    margin: 0 12px; }
+.page-footer .disabled {
+    color: #a1a1a1; }
+.page-footer a:hover {
+    border-color: #d11111;
+    color: #d11111; }
+.page-footer .current {
+    border-color: #d11111;
+    background-color: #d11111;
+    color: #fff; }
+.page-footer .jump-btn {
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 2px 0 0 10px;
+    cursor: pointer;
+    line-height: 30px; }
+.page-footer .page-now {
+    margin: 5px;
+    height: 25px;
+    width: 38px;
+    line-height: 25px;
+    text-align: center; }

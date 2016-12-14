@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="base.js"></script>
+    <script src="ajaxget.js"></script>
+
+    <style>
+	    *{list-style:none;margin:0;padding:0;}
+        #list {width:600px;margin:0 auto;padding:10px;}
+		.item{ border-bottom: 2px solid #ccc;height:120px;line-height:100px;padding:10px;}
+        img{float:left;display:block;width:100px;hieght:100px;}
+		.wrap{float:left;width:450px;height:100px;padding-left:30px}
+        a{display:block;text-decoration:none;}
+		.explain{font:15px/30px bold;color:#000; height:50px;padding:10px 0;}
+		.money{font:9px/18px bold;color:#f00; height:20px;padding-top:10px;}
+		#btn{display:block;width:150px;height:50px;margin:20px auto;background:#f00;
+		border:1px solid #960;border-radius:15px;}
+
+    </style>
+</head>
+<body>
+    
+
+    <ul id="list">
+        <li class="item">
+        <img src="1a.jpg" />
+        <div class="wrap">
+            <a href="#" class="explain">外星人（Alienware）ALWAR-2508MB 台式电脑 （i5-4590T 8G 1T 三年上门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>月销量：100</span></a>
+            
+            <a href="#" class="money">$1000</a>
+         </div>
+        </li>
+    </ul>
+    <input type="button" id="btn" value="加载更多"/>
+<script>
+    oList = document.getElementById("list");
+    oBtn = document.getElementById("btn");
+	
+    oBtn.onclick=function(){
+		
+        ajax("http://www.setfarm.com/index.php/Api/Api?CODE=125",
+		function(data){
+			              console.log(data);
+                         var oData=JSON.parse(data);
+						 var arr=oData.data.dataInfo;
+						 
+            for(var i=0;i<arr.length;i++){
+               var oLi=document.createElement("li");
+			   oLi.className="item";
+			   oLi.innerHTML='<img src="'+arr[i].format_image+'"/>'+
+			                  '<div class="wrap">'+
+							  '<a href="#" class="explain">'+arr[i].name+
+							  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>月销量:'+
+							  arr[i].sell_amount+'</span></a>'+
+							  '<a href="#" class="money">'+arr[i].format_market_price+'</a></div>'
+                     oList.appendChild(oLi);
+            }
+
+        },function(){
+            alert("失败")
+        })
+    }
+</script>
+</body>
+</html>
