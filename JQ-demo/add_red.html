@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border:0;
+        }
+        ol, ul ,li{list-style: none;}
+
+        #click{
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        #box{
+            width:500px;
+            margin:100px auto;
+            background:#ccc;
+            display: none;
+        }
+        #opp-off{
+            width:40px;
+            height:40px;
+            font-size: 40px;
+            padding-left:460px;
+            line-height:40px;
+            text-align:center;
+            color:#fff;
+            background:blue;
+        }
+         #opp-off:hover{
+            color:#f00;
+         }
+
+         .cl01{
+            width:100%;
+            padding:10px 0;
+         }
+         
+         .a01{
+            height:30px;
+            width:50%;
+            margin-left:20px;
+         }
+         .add,.red{
+            width:30px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            background:orange;
+            padding: 5px 10px;
+            margin-left:20px;
+         }
+         #wrap{
+            width:100%;
+            padding-bottom: 20px;
+         }
+        </style>
+        
+    </head>
+    <body>
+        <div id="click">点</div>
+        <div id="box">
+            <div id="opp-off"> × </div>
+            <p class="cl01">
+                <input class = "a01" type="data" />
+                <span class="add"> + </span>
+            </p>  
+            <div id="wrap">
+                
+            </div>       
+        </div>
+        <script type="text/javascript" src='../jq-version/jquery.min.js'></script>
+        <script type="text/javascript">
+
+            $("#click").on("click",function() {
+                $("#box").show();
+            });
+
+            $("#opp-off").on("click",function() {
+                $("#box").hide();
+            });
+
+            //添加时间
+            var arr = [];
+            $(".add").on("click",function() {
+                alert("FUCK,开始添加元素啦！");
+                var p = document.createElement('p');
+                p.className = 'cl01';
+                p.innerHTML = '<input class = "a01" type="data" /><span class="red"> - </span>'
+                $("#wrap").append(p);
+                arr =  $(".red");
+                console.log("+++++++++++++++++"+arr.length);
+                for(var i=0; i<arr.length;i++) {     
+                    arr[i].index=i; 
+                     arr[i].onclick=function(){                      
+                        confirm("确定是否删除");
+                        this.parentNode.remove();
+                         arr =  $(".red");
+                        console.log("-----------------"+arr.length);
+                    };  
+                };
+                
+            });
+        </script>
+    </body>
+</html>
