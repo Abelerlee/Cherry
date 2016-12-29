@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body,html{
+                width: 100%;
+                height: 100%;
+                background:#ccc;
+            }
+            img{
+                border:0;
+            }
+            ol, ul ,li{list-style: none;} 
+            .cl{
+                clear:both;
+            }
+            .fl{
+                float:left;
+            }
+            .fr{
+                float:right;
+            }
+            .wrap{
+                width: 1200px;
+                height:100%;
+                margin:0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <p>
+                <h1>1. 0.5px像素边框 &nbsp;&nbsp;&nbsp; 不支持安卓</h1>
+                <p>
+                    <h3>优点</h3>
+                    简单快捷方便
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                     retina 屏的浏览器可能不认识0.5px的边框，将会把它解释成0px，没有边框。包括 iOS 7 和之前版本，OS X Mavericks 及以前版本，还有 Android 设备。
+                </p>
+                <p>
+                    <h3>解决方案</h3>
+                     解决方案是通过 JavaScript 检测浏览器能否处理0.5px的边框，如果可以，给html标签元素添加个class。
+                </p>
+            </p>
+            <style type="text/css">
+                div {
+                   border: 1px solid #bbb;
+                }
+                .hairlines div {
+                   border-width: 0.5px;
+                }
+            </style>
+            <script type="text/javascript">
+                if (window.devicePixelRatio && devicePixelRatio >= 2) {
+                    var testElem = document.createElement('div');
+                    testElem.style.border = '.5px solid transparent';
+                    document.body.appendChild(testElem);
+                    if (testElem.offsetHeight == 1) {
+                        document.querySelector('html').classList.add('hairlines');
+                    }
+                    document.body.removeChild(testElem);
+                }
+                // 脚本应该放在内，如果在里面运行，需要包装 $(document).ready(function() {})
+            </script>
+
+            <p><h1>2. 使用border-image实现 &nbsp;&nbsp;&nbsp;非视网膜屏上不支持</h1>
+                <p>
+                    <h3>优点</h3>
+                    可以设置单条,多条边框
+                    没有性能瓶颈的问题
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    修改颜色麻烦, 需要替换图片
+                    圆角需要特殊处理，并且边缘会模糊
+                </p>
+            </p>
+
+            <p><h1>3. 使用background-image实现</h1>
+                <p>
+                    <h3>优点</h3>
+                    可以实现单条、多条边框
+                    边框的颜色随意设置
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    修改颜色麻烦, 需要替换图片
+                    圆角需要特殊处理，并且边缘会模糊
+                </p>
+            </p>
+
+            <p><h1>4. 背景渐变实现</h1>
+                <p>
+                    <h3>优点</h3>
+                    可以实现单条、多条边框
+                    边框的颜色随意设置
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    代码量不少
+                    圆角没法实现
+                    多背景图片有兼容性问题
+                </p>
+            </p>
+
+            <p><h1>5. 使用box-shadow模拟</h1>
+                <p>
+                    <h3>优点</h3>
+                    代码量少
+                    可以满足所有场景
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    边框有阴影，颜色变浅
+                </p>
+            </p>
+
+            <p><h1>6. viewport+rem</h1>
+                <p>
+                    <h3>优点</h3>
+                    所有场景都能满足
+                    一套代码，可以兼容基本所有布局
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    老项目修改代价过大，只适用于新项目
+                </p>
+            </p>
+            <p><h1>7. 伪类 + transform 实现</h1>
+                <p>
+                    <h3>优点</h3>
+                    所有场景都能满足
+                    支持圆角(伪类和本体类都需要加border-radius)
+                </p>
+                <p>
+                    <h3>缺点</h3>
+                    对于已经使用伪类的元素(例如clearfix)，可能需要多层嵌套
+                </p>
+            </p>
+        </div>
+    </body>
+</html>
