@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range</title>
+	<style type="text/css">
+	span{
+		width:100px;
+		height: 100px;
+		border: 1px solid #ccc;
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<input type="range" id="txtR" max="255" min="0" step='1' value="0" oninput="setSpanColor()"></input>
+	<input type="range" id="txtG" max="255" min="0" step='1' value="0" oninput="setSpanColor()"></input>
+	<input type="range" id="txtB" max="255" min="0" step='1' value="0" oninput="setSpanColor();"></input>
+
+	<span id='sp'></span>
+
+	<em id="em">(0,0,0)</em>
+
+	<script type="text/javascript">
+		function $$(id){
+			return document.getElementById(id);
+		}
+		function setSpanColor(){
+			var tR = $$("txtR").value;
+			var tG = $$("txtG").value;
+			var tB = $$("txtB").value;
+			console.log(tR,tG,tB);
+			var colorRgb = 'rgb('+tR+','+tG+','+tB+')';
+			$$("em").innerHTML = colorRgb;
+			$$('sp').style.backgroundColor = colorRgb;
+		}
+		setSpanColor();
+	</script>
+</body>
+</html>
