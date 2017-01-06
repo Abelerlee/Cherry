@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>indexOf</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+        }
+        li:nth-child(odd){
+            display:block;
+            width: 100%;
+            height: 50px;
+            background-color: #666;
+        }
+        li:nth-child(even){
+            display:block;
+            width: 100%;
+            height: 50px;
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111111111111111111111111111</li>
+        <li>22222222222222222222222222222222</li>
+        <li>3333333333333333333333333333333333333</li>
+        <li>444444444444444444444444444444444444444444</li>
+        <li>55555555555555555555555555555555555555555555555</li>
+        <li>6666666666666666666666666666666666666666666666666666</li>
+    </ul>
+    <script>
+        var oLi = document.getElementsByTagName("li");
+        var str = "wefhaoi weoifn  fdjf wefui  dfsfoj  oigdf dfnkr";
+
+        if (!Array.prototype.indexOf){
+            Array.prototype.indexOf = function(elt /*, from*/){
+                var len = this.length >>> 0;
+                var from = Number(arguments[1]) || 0;
+                    from = (from < 0)? Math.ceil(from) : Math.floor(from);
+            if (from < 0)
+            from += len;
+            for (; from < len; from++)
+            {
+            if (from in this &&
+                this[from] === elt)
+                return from;
+            }
+            return -1;
+        };
+        }
+        console.log(str.indexOf("d"));
+    </script>
+</body>
+</html>

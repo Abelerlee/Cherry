@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body { height: 100%;}
+        body {  background-size: 100% 100%}
+        div { background: url("cc.gif") no-repeat center; width: 100px; height:140px; position: absolute; left: 0; top:0 ;}
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+<script>
+    function  $(str){
+        return document.getElementById(str)
+    }
+
+
+    var aDiv = document.getElementsByTagName("div")
+    for(var i=0;i<aDiv.length;i++){
+        move (aDiv[i])
+       aDiv[i].onmouseover=function(){
+            clearInterval(this.timer)
+        }
+        aDiv[i].onmouseout=function(){
+            autoMove(this)
+       }
+    }
+
+
+    function move (obj){
+        obj.onmousedown=function(event){
+            var oEvent = window.event||event;
+            var disX= oEvent.clientX-obj.offsetLeft;
+            var disY= oEvent.clientY-obj.offsetTop;
+
+            document.onmousemove=function(event){
+                var oEvent = window.event||event;
+                obj.style.left=oEvent.clientX-disX+"px";
+                obj.style.top=oEvent.clientY-disY+"px";
+                return false;
+            }
+            document.onmouseup=function(){
+                document.onmousemove=null;
+            }
+
+        }
+    }
+
+    function autoMove(obj){
+        obj.timer = setInterval(function(){
+            obj.style.left= obj.offsetLeft+2+"px";
+
+        },40)
+    }
+
+
+</script>
+</body>
+</html>
