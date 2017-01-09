@@ -1,0 +1,492 @@
+/* 
+* @Author: anchen
+* @Date:   2017-01-09 22:46:53
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-01-09 22:47:14
+*/
+@charset "utf-8";
+.idx-focus{height:680px;width:100%;z-index:1; position: relative;overflow:hidden}
+.idx-focus ul{width:1000%;display:block;position:absolute;left:0px;top:0px;z-index:1}
+.idx-focus li{width:10%;float:left;height:680px;background-size:cover;background-position:center center;position:relative}
+.idx-focus li a{position:absolute;top:0px;left:0px;display:block;width:100%;height:100%;z-index:4}
+.idx-focus li h5{text-align:center;font:24px/50px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";color:#fff;position:absolute;bottom:35px;width:100%;z-index:3}
+.idx-focus li i{width:281px;height:294px;display:block;position:absolute;top:50%;margin-top:-147px;left:50%;margin-left:-140px;background:url(http://img1.lotour.com/2016/index_web/pplogo.png) no-repeat center;background-size:100%;z-index:10;}
+.idx-focus li .bg{background:url(http://img1.lotour.net/index/hdbg.png) repeat-x 0 bottom;position:absolute;width:100%;height:100%;z-index:1;bottom:0px;left:0px}
+.idx-focus li .bg2{background:url(http://img1.lotour.com/2016/index/hdbg2.png) repeat-x 0 top;position:absolute;width:100%;height:100%;z-index:1;bottom:0px;left:0px}
+.bdBtnL,.bdBtnR{position:absolute;top:46%;width:40px;height:40px;z-index:2; display:none}
+.bdBtnL{left:0;}.bdBtnR{right:0;}
+.bdBtnL a,.bdBtnR a{position:relative;display:block;width:38px;height:55px;background:url(http://img1.lotour.com/2016/index/listbtn.png) no-repeat 0 0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80);opacity:0.8}
+.bdBtnL a{background-position:right 0}
+.bdBanCtrla{opacity:0.8}
+
+.pgs{text-align:center;width:100%;position:absolute;bottom:-1px;height:2px;left:0px;z-index:3}
+.pgs i{float:left;height:1px;background:#7a7a7a; margin:0;cursor:pointer;width:20%}
+.pgs i.on{background:#97dddb;}
+.pgs i em{background:#ec6909;width:0; display:block; height:100%;}
+.pgs i.on em{width:100%;transition:all linear 5s}
+.pgs i.on:first-child em{width:100%;transition:all linear 7s}
+
+.index-tips{height:39px;background:#303030;border-top:1px solid #171717; text-align:center;}
+.index-tips p{font:12px/39px '微软雅黑';color:#717171}
+.index-tips p span{color:#c5c478;font-size:14px; padding:0 3px}
+.index-srh { padding:50px 0 10px;}
+.index-srh .tt{font:16px/20px '微软雅黑';color:#676b6e; text-align:center}
+.index-srh .ipt {width:900px; margin:20px auto;position:relative;z-index:2}
+.index-srh .ipt form { margin-left: 300px; }
+.index-srh .ipt input{width:255px; padding:6px 0 6px 45px; height:20px;font:12px/20px '宋体';border:0 none;background:url(http://img1.lotour.com/2016/index/srhico.png) no-repeat 16px 7px #c7c7c9;color:#fff; border-radius:3px; }
+.index-srh .ipt .hot-word{ width:100%; color:#bdbdbd; text-align: center; font-family:'微软雅黑';}
+.index-srh .ipt .hot-word a{color:#bdbdbd; line-height:30px;}
+.index-srh .ipt .hot-word a:hover {color:#ec6909}
+
+
+.index-srh .ipt .len{position:absolute;top:33px;left:300px;width:300px;background:rgba(255,255,255,0.8)!important;background:#fff;border-radius:5px;display:none;overflow:hidden}
+.index-srh .ipt .len a{display:block;overflow:hidden;height:30px;font:12px/30px \5b8b\4f53;padding-left:35px;background:url(http://img1.lotour.net/index/len.png) no-repeat;color:#999}
+.index-srh .ipt .len a:hover,.index-srh .ipt .len a.hover{background-color:#FFC;color:#555}
+.index-srh .ipt .len a.l1{background-position:5px 3px}
+.index-srh .ipt .len a.l2{background-position:5px -29px}
+.index-srh .ipt .len a.l3{background-position:5px -61px}
+.index-srh .ipt .len a.l4{background: url(http://img1.lotour.net/index/len4.png) no-repeat 5px 3px;}
+.index-srh .ipt .len #mddtj{background-position:5px -93px}
+.index-srh .ipt .len a.l4:hover,.index-srh .ipt .len a.l4.hover{background: url(http://img1.lotour.net/index/len4.png) no-repeat 5px 3px #FFC;}
+
+
+.index-srh .ipt .src-ly{position:absolute;top:30px;left:300px;width:300px;height:auto;background:rgba(255,255,255,0.9)!important;background:#fff;border-radius:3px}
+.index-srh .ipt .src-ly .in{padding:10px 13px 0}
+.index-srh .ipt .src-ly h6{font:12px/22px 微软雅黑;color:#999;border-bottom:1px solid #d0d0d0;padding-left:20px;margin-bottom:5px}
+.index-srh .ipt .src-ly h6.h1{background:url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 2px}
+.index-srh .ipt .src-ly h6.h2{background:url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 -20px}
+.index-srh .ipt .src-ly .cls{position:absolute;right:13px;top:13px;background:url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 -48px;width:14px;height:14px}
+.index-srh .ipt .src-ly ul{margin-bottom:10px}
+.index-srh .ipt .src-ly li{float:left;width:54px}
+.index-srh .ipt .src-ly li.ed{width:24px}
+.index-srh .ipt .src-ly li a{color:#999;font:12px/25px 微软雅黑}
+.index-srh .ipt .src-ly li a:hover{color:#ff860d}
+
+
+
+
+
+
+.index-srh input::-webkit-input-placeholder{color:#fff;}
+.index-srh input::-moz-placeholder{color:#fff;}
+.index-srh input:-moz-placeholder{color:#fff;}
+
+.index-s-item { }
+.index-h5 {text-align:center;font:24px/30px 微软雅黑; color:#676b6e;}
+.index-h5 a {color:#676b6e;}
+.index-h5 a:hover { opacity:0.8}
+.index-p {text-align:center;font:14px/30px arial; color:#b9b9b9;}
+.index-s-list { width:1200px; margin:20px auto 80px;}
+.index-s-list .in{overflow:hidden; position:relative;height:285px; margin-right: 5px;}
+.index-s-list .in .left{display:block;width:38px;height:55px;background:url(http://img1.lotour.com/2016/index/listbtn.png) no-repeat right 0;position:absolute;left:0px;top:70px;z-index:2;opacity:0.8}
+.index-s-list .in .right{display:block;width:38px;height:55px;background:url(http://img1.lotour.com/2016/index/listbtn.png) no-repeat 0 0;position:absolute;right:0px;top:70px;z-index:2;opacity:0.8}
+.index-b-list .in .left{display:block;width:38px;height:55px;background:url(http://img1.lotour.com/2016/index/listbtn.png) no-repeat right 0;position:absolute;left:0px;top:125px;z-index:2;opacity:0.8}
+.index-b-list .in .right{display:block;width:38px;height:55px;background:url(http://img1.lotour.com/2016/index/listbtn.png) no-repeat 0 0;position:absolute;right:0px;top:125px;z-index:2;opacity:0.8}
+
+.index-s-list ul{position:absolute;left:0;top:0;z-index:1;width: 1200px;}
+.index-s-list .in .left:hover,.index-s-list .in .right:hover,.index-b-list .in .left:hover,.index-b-list .in .right:hover{opacity:1;}
+.index-s-list .in .hide,.index-b-list .in .hide{display:none;}
+.index-s-list li{ float:left;width:195px;margin-right:5px;}
+.index-s-list li .img{ width:195px;height:195px; overflow:hidden;position:relative;display:block;}
+.index-s-list li .img img{ width:195px;height:195px;border-radius:5px;}
+.index-s-list li .img em{ display:block; width:195px;height:195px;position:absolute;top:0;left:0; display:block;/*background:url(http://img1.lotour.com/2016/index/lstbg.png) repeat 0 -100px;*/font:20px/30px 微软雅黑; text-align:center;color:#FFF;overflow:hidden; transition:all .5s ease-in-out;z-index: 2}
+.index-s-list li .img:hover em{background-position:0 -350px;}
+.index-s-list li .img em span { padding-top:90px; display:block}
+.index-s-list li .img em span.t2 { padding-top:75px; display:block}
+.index-s-list li .img .i1{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;top: 0px;left:0;z-index: 1; transition:all 1s ease-in-out; background-size: contain;}
+.index-s-list li .img .i2{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;bottom: 0px;left:0;z-index: 1; transition:all 1s ease-in-out;background-size: contain;}
+
+.index-s-list li .img:hover .i1{top:-115px}
+.index-s-list li .img:hover .i2{bottom:-115px}
+
+
+.index-s-list li .txt {font:12px/20px 微软雅黑;color:#b7b7b7;padding:10px 0;margin:0 8px;}
+.index-s-list li .st {font:12px/40px 微软雅黑;color:#555555;padding:0 15px;}
+.index-s-list li .arcer {padding:0 15px;}
+.index-s-list li .arcer img {border-radius:100%; margin-right:8px;width:30px;height:30px}
+
+
+.index-b-list { width:1200px; margin:20px auto 0px;}
+.index-b-list .in { position:relative;height:405px;overflow:hidden}
+.index-b-item .index-b-list .in {
+    height:auto
+}
+.index-b-list .in ul {position:absolute;left:0;top:0;z-index:1; }
+.index-b-item .index-b-list .in ul {
+    position:static
+}
+.index-b-item .index-b-list .in ul li{
+    height:440px;
+    overflow:hidden
+}
+.wei-web {
+    display:none}
+
+.index-c-item .index-b-list .in { margin-right:5px;}
+.index-c-item .index-b-list .in ul {width:100000px
+}
+.index-b-list li{ float:left;width:295px;margin-right:5px;position:relative;margin-bottom:45px;}
+.index-b-list li .img{ width:295px;height:295px; overflow:hidden;position:relative;display:block;}
+.index-b-list li .img img{ width:295px;height:295px;border-radius:5px;}
+.index-b-list li .img em{ display:block; width:295px;height:295px;position:absolute;top:0;left:0; display:block;/*background:url(http://img1.lotour.com/2016/index/lstbg.png) repeat 0 -100px;*/font:21px/29px 微软雅黑; text-align:center;color:#FFF;overflow:hidden;border-radius:5px; transition:all .5s ease-in-out;z-index: 2}
+.index-b-list li .img:hover em{background-position:0 -330px;}
+.index-b-list li .img em span { padding-top:135px; display:block}
+.index-b-list li .img em span.t2 { padding-top:118px; display:block}
+
+
+.index-b-list li .img .i1{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;top: -35px;left:0;z-index: 1; transition:all .8s ease-in-out; background-size: contain;}
+.index-b-list li .img .i2{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;bottom: -35px;left:0;z-index: 1; transition:all .8s ease-in-out;background-size: contain;}
+
+.index-b-list li .img:hover .i1{top:-180px}
+.index-b-list li .img:hover .i2{bottom:-150px}
+
+
+.index-b-list li .rk {position:absolute;left:0;bottom:70px;display:none;z-index: 3}
+.index-b-list li:hover .rk {display:block;}
+.index-b-list li .rk a{float:left;font:12px/17px 微软雅黑;color:#eee;border:1px solid #eee;padding:0 8px; margin-left:14px;border-radius:3px; opacity:0.8;margin-bottom:5px}
+.index-b-list li .rk a:hover{background:#ff860d;color:#fff;border:1px solid #ff860d}
+
+.index-b-item .index-b-list li .rk{bottom: 150px;}
+
+.index-b-list li h5{height:40px;overflow:hidden; padding:0 10px}
+.index-b-list li h5 a{color:#555;font:18px/40px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";vertical-align:middle;margin-top:3px}
+.index-b-list li h5 a:hover{color:#ff860d}
+.index-b-list li .tool {text-align:left;padding:0 10px 5px; font-family: "Microsoft YaHei";}
+.index-b-list li .tool a{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;display:inline-block;padding-left:16px;background-position:0 -98px;line-height:20px;color:#b1b1b1;margin-right:20px}
+.index-b-list li .tool a:hover{color:#ff860d}
+.index-b-list li .tool em{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;padding-left:13px;background-position:0 -181px;display:inline-block;line-height:20px;color:#b1b1b1;font-style:normal;margin-right:15px;font-family:arial;font-size:12px}
+.index-b-list li .tool i{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;padding-left:18px;background-position:0 -156px;display:inline-block;line-height:20px;color:#b1b1b1;font-style:normal;margin-right:20px;font-family:arial;font-size:12px}
+.index-b-list li .rter {width:178px;border-top:1px solid #e7e7e7;padding:12px 0 0 17px; margin-top:10px }
+.index-b-list li .rter img{ float:left;width:30px;height:30px;border-radius:100%;margin-right:6px;}
+.index-b-list li .rter .p { float:left;width:135px;}
+.index-b-list li .rter .p a{ font:12px/19px 微软雅黑;color:#818181;}
+.index-b-list li .rter .p a:hover {
+    color:#ec6909}
+.index-b-list li .rter .p p{ font:12px/19px 微软雅黑;color:#b7b7b7;}
+
+.index-ad-item {padding-top:30px}
+.index-ad-item h5{font-size:16px; line-height:22px; margin-bottom:25px }
+.index-ad-item .index-b-list {margin-top:10px }
+.index-ad-item .index-b-list li {margin-bottom:35px }
+.index-ad-item .index-b-list li .img{height:200px}
+.index-ad-item .index-b-list li .img img{height:200px}
+.index-ad-item .index-b-list li .img em {height:200px}
+.index-ad-item .index-b-list li .img em span { padding-top:90px; display:block}
+.index-ad-item .index-b-list li .img em span.t2 { padding-top:75px; display:block}
+
+.index-ad-item .index-b-list li p { font:12px/18px 微软雅黑;color:#818181; text-align:center; padding:15px 0 0 0}
+
+
+
+.idx-inspire{overflow:hidden;position:relative;margin-bottom:55px;}
+.idx-inspire ul{position:relative;z-index:1}
+.idx-inspire ul li{width:100%;cursor:pointer}
+.idx-inspire li{background-size:cover;width:100%;background-position:top center;position:relative;overflow:hidden}
+.idx-inspire li h5{z-index:2;position:absolute;bottom:170px;left:0px;text-align:center;font:24px/50px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";width:100%;text-align:center;color:#fff}
+.idx-inspire li .us{z-index:2;position:absolute;bottom:62px;left:0px;text-align:center;font:18px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";width:100%;text-align:center;color:#fff; text-align:center}
+.idx-inspire li .us img{width:60px;height:60px;border-radius:100%;}
+.idx-inspire li .us p{width:100%; text-align:center;font:16px/48px 微软雅黑;color:#fff;}
+.idx-inspire li .us .i1{ width:265px;height:1px;font-size:0;line-height:0px; position:absolute;top:40px; left:50%; margin-left:-300px;background:#fff; opacity:0.3}
+.idx-inspire li .us .i2{ width:265px;height:1px;font-size:0;line-height:0px; position:absolute;top:40px; right:50%; margin-right:-300px;background:#fff; opacity:0.3}
+.idx-inspire li a{z-index:2;width:220px;height:43px;display:block;border:2px solid #fff;border-radius:5px;font:16px/43px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";text-align:center;color:#fff;position:absolute;bottom:15px;left:50%;margin-left:-112px;background:0 none;cursor:pointer;opacity:0.65}
+.idx-inspire li a:hover{-webkit-animation:color2 0.5s linear;animation:color2 0.5s linear;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}
+.idx-inspire li .bg{background:url(http://img1.lotour.net/index/hdbg2.png) repeat-x 0 bottom;position:absolute;width:100%;height:100%;z-index:1;bottom:0px;left:0px}
+
+.idx-inspire .pt{position:absolute;width:12px;right:10%;top:40%;z-index:9999}
+.idx-inspire .pt a{width:8px;height:8px;background:#fff;border-radius:100%;margin:10px auto;display:block;-webkit-animation-time:.5s}
+.idx-inspire .pt a.on{width:8px;height:8px;background:none;border:2px solid #eb6100;border-radius:100%}
+
+
+
+
+.index-c-item .index-p {line-height:20px;margin-bottom:10px}
+.index-c-item .index-they { text-align:center;line-height:20px;font:14px/50px 微软雅黑;color:#949494;  }
+.index-c-item .index-they-img{ text-align:center}
+.index-c-item .index-they-img img{ text-align:center; margin:0 3px;border-radius:100%;width:30px;height:30px;}
+
+
+
+
+
+.index-c-list { width:1200px; margin:20px auto 0px;}
+.index-c-list li{ float:left;width:595px;margin-right:5px;position:relative;margin-bottom:55px;}
+.index-c-list li .img{ width:595px;height:295px; overflow:hidden;position:relative;display:block;}
+.index-c-list li .img img{ width:595px;height:295px;border-radius:5px;}
+.index-c-list li .img em{ display:block; width:595px;height:295px;position:absolute;top:0;left:0; display:block;/*background:url(http://img1.lotour.com/2016/index/lstbg.png) repeat 0 -100px;*/font:21px/29px 微软雅黑; text-align:center;color:#FFF;overflow:hidden;border-radius:5px;transition:all .5s ease-in-out;z-index: 2}
+.index-c-list li .img:hover em{background-position:0 -330px; }
+
+.index-c-list li .img em span { padding-top:140px; display:block}
+.index-c-list li .img em span.t2 { padding-top:105px; display:block}
+
+.index-c-list li .img .i1{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;top: -35px;left:0;z-index: 1; transition:all .8s ease-in-out; background-size: contain;}
+.index-c-list li .img .i2{width: 100%;height:100%;display: block;background:url(http://img1.lotour.com/2016/index/ibg.png) repeat center center;position: absolute;bottom: -35px;left:0;z-index: 1; transition:all .8s ease-in-out;background-size: contain;}
+
+.index-c-list li .img:hover .i1{top:-180px}
+.index-c-list li .img:hover .i2{bottom:-150px}
+
+.index-c-list li .rk {position:absolute;left:0;bottom:70px;display:none;z-index: 3}
+.index-c-list li:hover .rk{display:block}
+.index-c-list li .rk a{float:left;font:12px/17px 微软雅黑;color:#eee;border:1px solid #eee;padding:0 8px; margin-left:14px;border-radius:3px;opacity:0.8; margin-bottom: 5px}
+.index-c-list li .rk a:hover {background: #ff860d;color: #fff;border: 1px solid #ff860d;}
+
+.index-c-list li h5{height:40px;overflow:hidden; padding:0 10px}
+.index-c-list li h5 a{color:#333;font:18px/40px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";vertical-align:middle;margin-top:3px}
+.index-c-list li h5 a:hover{color:#ff860d}
+.index-c-list li .tool {text-align:left;padding:0 0 5px 10px}
+.index-c-list li .tool a{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;display:inline-block;padding-left:16px;background-position:0 -98px;line-height:20px;color:#b1b1b1;margin-right:20px}
+.index-c-list li .tool a:hover{color:#ff860d}
+.index-c-list li .tool em{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;padding-left:13px;background-position:0 -181px;display:inline-block;line-height:20px;color:#b1b1b1;font-style:normal;margin-right:15px;font-family:arial;font-size:12px}
+.index-c-list li .tool i{background:url(http://img1.lotour.net/discover/discover_bg.png) no-repeat;padding-left:18px;background-position:0 -156px;display:inline-block;line-height:20px;color:#b1b1b1;font-style:normal;margin-right:20px;font-family:arial;font-size:12px}
+
+.index-b-list li .zz { width:50px;height:26px; background:rgba(0,0,0,0.3);width:50px;height:26px;font:14px/26px 微软雅黑;position:absolute;right:0;top:20px; text-align:center; color:#fff; border-top-left-radius:3px; border-bottom-left-radius:3px;}
+.index-c-list li .zz { width:50px;height:26px; background:rgba(0,0,0,0.3);width:50px;height:26px;font:14px/26px 微软雅黑;position:absolute;right:0;top:20px; text-align:center; color:#fff; border-top-left-radius:3px; border-bottom-left-radius:3px;}
+
+
+.index-zz-item { margin-bottom:40px}
+.index-zz-item .index-h5 {text-align:center;font:24px/70px 微软雅黑; color:#676b6e;}
+.index-zz-item .index-zz-p {text-align:center;font:16px/22px 微软雅黑; color:#676b6e; margin-bottom:35px;}
+
+.topbg {width:600px;height:auto;margin:0 auto 65px}
+.topbg .color-bg {width:100%;height:auto; background:#ec5e50;overflow:hidden}
+.topbg .color-bg .topcen {width:465px;height:auto;margin:0 auto;padding-top:120px;margin-bottom:20px; overflow: hidden;}
+.topbg .color-bg li {float:left}
+.topbg .color-bg .sml {width:123px;height:98px;margin-top:50px;}
+.topbg .color-bg .sml div { float:left; width: 98px; height: 98px; border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;background:#fff;opacity:.2}
+.topbg .color-bg .sml p{height:auto;margin:27px 0;font:14px/20px \5FAE\8F6F\96C5\9ED1;color:#ec5e50;text-align: center;}
+.topbg .color-bg .sml p em{display:inline-block;width:80px;max-height:26px;font:12px/13px \5FAE\8F6F\96C5\9ED1;text-align:center;margin-top:2px;overflow:hidden;}
+.topbg .color-bg ul i{float:left;width:25px;height:1px;margin-top:49px;background:url(http://img1.lotour.com/writer2/writer-article/heng.png) no-repeat center;background-size:cover}
+.topbg .color-bg .touxiang{width:216px;height:216px;border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;background:#fff;overflow:hidden}
+.topbg .color-bg .touxiang .touxiangimg{width:200px;height:200px;margin:5px;border:3px solid #fff;border-radius:100%;-o-border-radius:100%;-moz-border-radius:100%;-webkit-border-radius:100%;}
+.topbg .color-bg .touxiang .weixinimg{display:none;width:142px;height:142px;margin:37px}
+.topbg .color-bg .wap-h2{display:none;}
+.topbg .color-bg .arttxt { width: 100%; margin-top:0; overflow:hidden;}
+.topbg .color-bg .arttxt h1{clear:both;color:#fff;font:28px/30px \5FAE\8F6F\96C5\9ED1;text-align:center;margin-bottom:7px;}
+.topbg .color-bg .arttxt h1 a{color:#fff;font:28px/30px \5FAE\8F6F\96C5\9ED1;}
+.topbg .color-bg .arttxt p{width:430px;max-height:70px;margin:0 auto;color:#fff;font:14px/18px \5FAE\8F6F\96C5\9ED1;text-align:center;overflow:hidden}
+.topbg .color-bg .arttxt p a{color:#fff;font:14px/18px \5FAE\8F6F\96C5\9ED1;}
+.topbg .color-bg .arttxt .dy_nw{display: block; width:70px; height:25px; margin-top:35px; border:1px solid #FFF; border-radius:3px; cursor:pointer;}
+.topbg .color-bg .arttxt .dy_nw img{}
+.topbg .color-bg .arttxt .dy_nw .dy{font:13px/25px \5FAE\8F6F\96C5\9ED1;}
+.topbg .color-bg .arc-nb { font: 21px/30px \5FAE\8F6F\96C5\9ED1; color:#fff; text-align:center;margin-bottom:25px;margin-top:45px;}
+.topbg .color-bg .arc-nb a{ font: 21px/30px \5FAE\8F6F\96C5\9ED1; color:#fff;}
+.topbg .color-bg .arc-nb .liulan-number{font:14px/20px \5FAE\8F6F\96C5\9ED1; margin-top:10px;}
+.topbg .color-bg .arc-nb .num{font-style: normal;}
+
+.idx-friend .fl .ff ul li h5{width:188px;}
+.idx-friend .fl .ff ul li h5 a{float:left; font:16px/34px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";}
+.idx-friend .fl .ff ul li p{width:263px;}
+.idx-friend .fl .ff ul li p i,.idx-friend .fl .ff ul li p em{font-style: normal; float:left;}
+.idx-friend .fl .ff ul li p em{float: right;}
+.idx-friend .fl .ff ul li p span{color:#333;}
+.idx-friend .fl .ff ul li .dy_nw2{ width:auto;float:right; cursor:pointer;}
+.idx-friend .fl .ff ul li .dy_nw2 .dy_pic{display:inline-block;width:11px; height:11px; margin-top: 12px; margin-right: 3px;}
+.idx-friend .fl .ff ul li .dy_nw2 .dy{font-style:normal; color:#f90; font:12px/34px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";}
+
+.index-zzb-h5 {text-align:center;font:24px/30px 微软雅黑; color:#676b6e;margin:20px auto 0}
+.index-zzb-p {text-align:center;font:17px/24px arial; color:#b0b0b0;margin:0px auto 20px}
+.index-zzb-btn { width:280px;height:35px;margin:0 auto; border:1px solid #ff860d; border-radius:5px; font:20px/35px 微软雅黑;color:#ff860d;display:block; text-align:center}
+.index-zzb-btn:hover { background:#ff860d; color:#fff;}
+.index-zzb-join {color:#5d5d5d;font:14px/30px 微软雅黑; text-align:center }
+.index-zzb-join span {color:#ff860d;}
+
+.idx-inspire-bt{overflow:hidden;position:relative}
+.idx-inspire-bt ul{position:relative;z-index:1}
+.idx-inspire-bt ul li{position:relative;width:100%;overflow:hidden}
+.idx-inspire-bt li.li-01{background:url(http://img1.lotour.net/2016/index/yindao/yindao-bg_1.jpg) repeat center;background-size:cover}
+.idx-inspire-bt li.li-01 .txt-img img{width:769px;height:auto;margin:0 auto;margin-bottom:135px}
+.idx-inspire-bt li.li-01 .jia-txt{width:300px;font:18px/20px '微软雅黑';color:#fff;margin:0 auto 20px}
+.idx-inspire-bt li.li-01 .jiaru{width:300px;height:47px;margin:0 auto 10px;display:block;font:18px/47px 微软雅黑;color:#fff;text-align:center;background:#456293;border-radius:5px}
+.idx-inspire-bt li.li-01 .dl-inp{width:300px;height:47px;margin:0 auto 10px;display:block;font:18px/47px 微软雅黑;color: #333;text-align:center;background:rgba(255,255,255,.3);border-radius:5px}
+
+.idx-inspire-bt li.li-02{background:url(http://img1.lotour.net/2016/index/yindao/yindao-bg_2.jpg) repeat center;background-size:cover}
+.idx-inspire-bt li.li-02 .txt-img img{width:880px;height:auto;margin:0 auto;margin-bottom:43px}
+.idx-inspire-bt li.li-02 .gif-img{position:relative;width:573px;height:463px;margin-left:349px;text-align:center;/*background:url(http://img1.lotour.net/2016/index/yindao/gif-bg.png) no-repeat center;margin-bottom:55px*/}
+.idx-inspire-bt li.li-02 .gif-img p{position:absolute;top:0;left:0;width:100%;}
+.idx-inspire-bt li.li-02 .gif-img img{width:100%;height:auto}
+
+.idx-inspire-bt li.li-03{background:url(http://img1.lotour.net/2016/index/yindao/yindao-bg_3.jpg) repeat center;background-size:cover}
+.idx-inspire-bt li.li-03 .txt-img img{width:1057px;height:auto;margin:0 auto;margin-bottom:115px}
+.idx-inspire-bt li.li-03 .map{position:relative;width:763px;height:456px;margin:0 auto;background:url(http://img1.lotour.net/2016/index/yindao/map.png) no-repeat center;}
+.idx-inspire-bt li.li-03 .map .man{position:absolute;top:60px;left:87px;width:41px;height:auto;z-index:99}
+.idx-inspire-bt li.li-03 .map .line01{position:absolute;top:120px;left:128px;width:0px;height:17px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line01.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd01{position:absolute;top:109px;left:335px;width:62px;height:70px;background:url(http://img1.lotour.net/2016/index/yindao/mdd01-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd01.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd01.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line02{position:absolute;top:115px;left:403px;width:0px;height:20px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line02.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd02{position:absolute;top:79px;left:472px;width:58px;height:65px;background:url(http://img1.lotour.net/2016/index/yindao/mdd02-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd02.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd02.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line03{position:absolute;top:80px;left:534px;width:0px;height:17px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line03.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd03{position:absolute;top:45px;left:594px;width:66px;height:74px;background:url(http://img1.lotour.net/2016/index/yindao/mdd03-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd03.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd03.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line04{position:absolute;top:110px;left:598px;width:10px;height:0px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line04.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd04{position:absolute;top:125px;left:555px;width:57px;height:64px;background:url(http://img1.lotour.net/2016/index/yindao/mdd04-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd04.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd04.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line05{position:absolute;top:193px;left:580px;width:7px;height:0px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line05.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd05{position:absolute;top:220px;left:572px;width:46px;height:52px;background:url(http://img1.lotour.net/2016/index/yindao/mdd05-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd05.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd05.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line06{position:absolute;top:274px;left:594px;width:0px;height:27px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line06.png) no-repeat}
+.idx-inspire-bt li.li-03 .map .mdd06{position:absolute;top:277px;left:620px;width:72px;height:81px;background:url(http://img1.lotour.net/2016/index/yindao/mdd06-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd06.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd06.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line07{position:absolute;top:295px;right:148px;width:0px;height:20px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line07.png) no-repeat right}
+.idx-inspire-bt li.li-03 .map .mdd07{position:absolute;top:265px;left:430px;width:46px;height:52px;background:url(http://img1.lotour.net/2016/index/yindao/mdd07-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd07.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd07.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line08{position:absolute;bottom:174px;left:477px;width:19px;height:0px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line08.png) no-repeat bottom}
+.idx-inspire-bt li.li-03 .map .mdd08{position:absolute;top:180px;left:465px;width:60px;height:67px;background:url(http://img1.lotour.net/2016/index/yindao/mdd08-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd08.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd08.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line09{position:absolute;top:212px;right:302px;width:0px;height:21px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line09.png) no-repeat right}
+.idx-inspire-bt li.li-03 .map .mdd09{position:absolute;top:210px;left:309px;width:55px;height:62px;background:url(http://img1.lotour.net/2016/index/yindao/mdd09-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd09.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd09.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line10{position:absolute;top:255px;right:450px;width:0px;height:56px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line10.png) no-repeat right}
+.idx-inspire-bt li.li-03 .map .mdd10{position:absolute;top:300px;left:183px;width:70px;height:79px;background:url(http://img1.lotour.net/2016/index/yindao/mdd010-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd10.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd010.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line11{position:absolute;bottom:160px;left:212px;width:7px;height:0px;overflow:hidden;background:url(http://img1.lotour.net/2016/index/yindao/line11.png) no-repeat bottom}
+.idx-inspire-bt li.li-03 .map .mdd11{position:absolute;top:178px;left:183px;width:61px;height:69px;background:url(http://img1.lotour.net/2016/index/yindao/mdd011-bl.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .mdd11.on{background:url(http://img1.lotour.net/2016/index/yindao/mdd011.png) no-repeat center}
+.idx-inspire-bt li.li-03 .map .line{display:block}
+
+.idx-inspire-bt li.li-04{background:url(http://img1.lotour.net/2016/index/yindao/yindao-bg_4.jpg) repeat center;background-size:cover}
+.idx-inspire-bt li.li-04 .txt-img img{width:980px;height:auto;margin:0 auto;margin-bottom:150px}
+.idx-inspire-bt li.li-04 .gif-img{width:819px;height:310px;background:url(http://img1.lotour.net/2016/index/yindao/jing.png) no-repeat center;margin:0 auto;overflow:hidden}
+.idx-inspire-bt li.li-04 .luo-box{position:relative;width:122px;height:73px;margin:5px 0 0 185px}
+.idx-inspire-bt li.li-04 .luo-box .luo01{position:absolute;top:27px;left:13px;width:39px;height:39px;}
+.idx-inspire-bt li.li-04 .luo-box .luo03{position:absolute;top:28px;left:60px;width:31px;height:30px;}
+
+.idx-inspire-bt li.li-04 .luo-box .luo02{position:absolute;top:10px;left:42px;width:27px;height:26px;}
+.idx-inspire-bt li.li-04 .luo-box .luo04{position:absolute;top:21px;left:87px;width:18px;height:18px;}
+
+.idx-inspire-bt li.li-05{background:url(http://img1.lotour.net/2016/index/yindao/yindao-bg_1.jpg) repeat center;background-size:cover}
+.idx-inspire-bt li.li-05 .txt-img img{width:318px;height:auto;margin:0 auto;margin-bottom:10px}
+
+.idx-inspire-bt li .inner{ width:1200px;margin:0 auto;text-align:center}
+.idx-inspire-bt li.li-02 .inner{margin-top:142px}
+.idx-inspire-bt li.li-03 .inner{margin-top:142px}
+.idx-inspire-bt li.li-04 .inner{margin-top:142px}
+.idx-inspire-bt li.li-05 .inner{margin-top:207px}
+
+.idx-inspire-bt .pt{position:absolute;width:12px;right:10%;top:40%;z-index:2}
+.idx-inspire-bt .pt a{width:10px;height:10px;background:url(http://img1.lotour.net/2016/index/yindao/quan.png) no-repeat center;margin:10px auto;display:block;-webkit-animation-time:.5s}
+.idx-inspire-bt .pt a.on{width:12px;height:12px;background:url(http://img1.lotour.net/2016/index/yindao/quan-hor.png) no-repeat center}
+.disnone{display:none;}
+.reler .in .ty .login_coin{width:17px;height:17px;display:block;position: absolute;right: 9px;top: 15px;background: url(http://img1.lotour.net/2016/index/yindao/jingwai.png) no-repeat center;cursor:pointer}
+.reler .in .ty .login_coin.on{width:19px;height:17px;background: url(http://img1.lotour.net/2016/index/yindao/jingnei.png) no-repeat center}
+
+.reler{ width:300px;margin:0 auto}
+.reler .in .ps{height:20px;margin-bottom:8px}
+.reler .in .psshow{background:url(http://img1.lotour.com/common/lg_icon.png) no-repeat 0px -68px; padding-left:20px;font:14px/20px \5FAE\8F6F\96C5\9ED1;text-align:left;color:#fff;}
+.reler .in .psshow1{padding-left:20px;font:14px/20px \5FAE\8F6F\96C5\9ED1;text-align:left;color:#fff;}
+.reler .in .ty{ margin-bottom:10px;position:relative}
+.reler .in .txt{height:30px; padding:7px 15px; font:14px/20px \5FAE\8F6F\96C5\9ED1;color:#fff;border-radius:5px;border:0px solid #c8ccd4; background:url(http://img1.lotour.net/2016/index/yindao/toum-30.png) repeat center}/*#c8ccd4*/
+.reler .in .tl{ width:270px;}
+.reler .in .ck{float:left;width:135px;}
+.re-layer .in .ck{width:107px;}
+.reler .in .code{float:right;width:124px;height:44px;border:1px solid #d7d7d7;border-radius:5px; cursor:pointer}
+.reler .in .wrong{border:1px solid #ffbd7b;box-shadow:0 0 5px #ffbd7b}
+.reler .in .tool{ margin-bottom:16px; padding-top:6px}
+.reler .in .tool label{float:left; padding-left:17px; font:12px/14px \5b8b\4f53;color:#999; background:url(http://img1.lotour.com/common/lg_icon.png) no-repeat 0px 0px;cursor:pointer}
+.reler .in .tool label.on{background-position:0px -20px}
+.reler .in .tool a{ float:right; color:#fe860c}
+.reler .in .sub input{display:block; width:300px; border:1px solid #456293;height:70px; font:26px/70px \5FAE\8F6F\96C5\9ED1; color:#fff; text-align:center;background:#456293; border-radius:5px;cursor:pointer}
+.re-layer .sub{ margin-bottom:20px}
+.reler .in .sub input:hover{animation:colorlg 0.5s linear;-webkit-animation:colorlg 0.5s linear;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}
+@keyframes colorlg{
+    to{background:#ff860d;border:1px solid #ff860d;color:#fff}
+}
+@-moz-keyframes colorlg{
+    to{background:#ff860d;border:1px solid #ff860d;color:#fff}
+}
+@-webkit-keyframes colorlg{
+    to{background:#ff860d;border:1px solid #ff860d;color:#fff}
+}
+
+.reler .in .tip{ text-align:center;color:#333;font:14px/20px \5FAE\8F6F\96C5\9ED1; padding:20px 0 15px;}
+.reler .in .tip a{color:#ff860d;font:14px/20px \5FAE\8F6F\96C5\9ED1}
+.reler { padding-bottom:20px}
+.reler .tip{ position:absolute;bottom:-25px; text-align:center;color:#fff;font:14px/20px \5FAE\8F6F\96C5\9ED1; padding:0;width:100%}
+.reler .tip a{color:#ff860d;font:14px/20px \5FAE\8F6F\96C5\9ED1}
+
+.reler .sps{position:absolute;right:10px;top:17px;cursor:pointer}
+.reler .ts{font:16px/20px \5FAE\8F6F\96C5\9ED1;color:#666; padding:20px 0 20px}
+.reler .ts span{color:#ff860d;}
+.reler .resent{ width:124px;height:44px;display:block;float:right;border:0px solid #a2aab7;border-radius:5px; cursor:pointer;   background:url(http://img1.lotour.net/2016/index/yindao/toum-65.png) repeat center;color:#474b51;font:14px/44px \5FAE\8F6F\96C5\9ED1}
+.reler .resent:hover,.reler .resent2{background:#f2f2f2}
+.reler .resent2{cursor:auto}
+.reler .mailtxt{ padding:5px 0 15px;text-align:center;}
+
+.reler .tk{font:12px/20px \5FAE\8F6F\96C5\9ED1;color:#cbdaed; text-align:left}
+.reler .tk a{color:#ff9900;text-decoration:underline}
+.reler .tk2{font:12px/20px \5FAE\8F6F\96C5\9ED1;color:#b2b6bc; text-align:left}
+.reler .tk2 a{color:#b2b6bc;}
+
+.reler .in{padding-top:15px}
+.reler .sub{ margin-bottom:15px}
+.reler .logintxt{ position:absolute;left:0px; bottom:-30px; font:14px/20px \5FAE\8F6F\96C5\9ED1; color:#ff840e;width:100%; text-align:center}
+.reler .logintxt a{color:#ff840e;}
+
+.reler input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#fff;
+    　　}
+.reler input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+    　　}
+.reler input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#fff;
+    　　}
+.reler input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#fff;
+    　　}
+
+
+
+
+@media screen and (max-width:1440px){
+    .idx-focus { height:480px}
+    .idx-focus li { height:480px }
+    .idx-inspire-bt li.li-02 .gif-img{position:relative;width:480px;height:400px;margin-left:239px}
+    .idx-inspire-bt li.li-01 .txt-img img{width:711px;/*height:81px;background:url(http://img1.lotour.net/2016/index/yindao/li-01-txt.png) no-repeat center*/}
+    .idx-inspire-bt li.li-02 .txt-img img{width:770px;/*height:89px;background:url(http://img1.lotour.net/2016/index/yindao/li-02-txt.png) no-repeat center*/}
+    .idx-inspire-bt li.li-03 .txt-img img{width:923px;/*height:89px;background:url(http://img1.lotour.net/2016/index/yindao/li-03-txt.png) no-repeat center*/}
+    .idx-inspire-bt li.li-04 .txt-img img{width:855px;margin-bottom:100px/*height:89px;background:url(http://img1.lotour.net/2016/index/yindao/li-04-txt.png) no-repeat center*/}
+    .idx-inspire-bt li.li-05 .txt-img img{width:276px;/*height:89px;background:url(http://img1.lotour.net/2016/index/yindao/li-05-txt.png) no-repeat center*/}
+.idx-inspire-bt li.li-03 .txt-img img{margin-bottom:20px}
+
+.idx-inspire-bt li .inner{ width:980px}
+.idx-inspire-bt li.li-02 .inner{margin-top:60px}
+.idx-inspire-bt li.li-03 .inner{margin-top:60px}
+.idx-inspire-bt li.li-04 .inner{margin-top:60px}
+.idx-inspire-bt li.li-05 .inner{margin-top:95px}
+
+}
+
+@media screen and (max-width:1200px){
+    .index-s-list,.index-b-list,.index-c-list { width:1000px;}
+    .index-b-list li { width:245px;}
+    .index-b-list li .img { width:245px;height:245px;}
+    .index-b-list li .img img { width: 245px; height: 245px; }
+    .index-b-list li .img em { width:245px;height:245px}
+    .index-b-list li .rk { bottom:70px}
+    .index-c-list li { width:495px;}
+    .index-c-list li .img { width:495px;height:245px}
+    .index-b-list li .img em span.t2 {padding-top: 95px;}
+    .index-b-list .in .left {top: 97px;}
+    .index-b-list .in .right {top: 97px;}
+    .index-c-list li .img img { width:495px;height:245px}
+    .index-c-list li .img em {width:495px;height:245px }
+    .index-c-list li .rk { bottom:70px}
+
+    .index-b-item .index-b-list li .rk{bottom: 200px;}
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

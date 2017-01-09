@@ -1,0 +1,62 @@
+/* 
+* @Author: anchen
+* @Date:   2017-01-09 22:44:22
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-01-09 22:44:43
+*/
+@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,
+
+th,td{margin:0;padding:0}
+body,button,input,select,textarea{font-size:12px;font-family:\5b8b\4f53}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+html,body{height:100%}
+b,strong{font-weight:bold}
+input{vertical-align:middle;}
+input::-ms-clear { display: none; }
+img{color:transparent;font-size:0;vertical-align:middle;-ms-interpolation-mode:bicubic;border:0}
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp{font-family:courier new,courier,monospace}
+small{font-size:12px}
+ul,ol{list-style:none}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+.clearfix:before, .clearfix:after{content:'.';display:block;overflow:hidden;visibility:hidden;font-
+
+size:0;line-height:0;width:0;height:0}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+.fl{float:left}
+.fr{float:right}
+.none{display:none}
+* html,* html body{background-image:url(http://img1.lotour.net/blank.png) repeat;background-
+
+attachment:fixed} /* 修正IE6振动bug */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,vi
+
+deo{display:block;margin:0;padding:0}
+/*乐币和经验值*/
+.jf-addnum{display:none;position:absolute;height:62px;left:50%;top:-65px; z-index:9999999999}
+.jf-addnum i{float:left;height:22px;margin:5px 0;padding-left:19px;color:#ec6909;font:normal 12px/14px 
+
+\5B8B\4F53;}
+.jf-addnum i.jf-lebi{background:url(http://img1.lotour.net/mylotourV2/jf_lebi.png) no-repeat 0 
+
+9px;background:url(http://img1.lotour.net/mylotourV2/jf_lebi2.png) no-repeat 0 9px \9}
+.jf-addnum i.jf-exp{background:url(http://img1.lotour.net/mylotourV2/jf_exp.png) no-repeat 0 9px}
+.jf-addnum-tip{display:none;position:fixed;top:0;left:50%;z-index:99999;height:34px;padding:0 20px 0 
+
+24px;border:2px solid #ff9900;background:#fff;color:#666;font:normal 12px/34px \5B8B
+
+\4F53;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop))}
+.jf-addnum-tip b{margin:0 5px;color:#ec6909;font-weight:bold}
+.posi1{top:131px;_top:expression(eval(document.documentElement.scrollTop));_margin-top:131px}
+.posi2{top:50px;_top:expression(eval(document.documentElement.scrollTop));_margin-top:50px}
+.posi3{top:0;_top:expression(eval(document.documentElement.scrollTop))}
