@@ -1,0 +1,466 @@
+@charset "utf-8";
+input { outline: none; }
+header { position: absolute; top: 0px; z-index: 9; width: 100%; }
+header .wap-header, header .wap-header .bd { display: none; }
+header .header { width: 1200px; height: 70px; margin: 0 auto; background: url(http://img1.lotour.com/2016/index/navbdbg.png) repeat-x 0 bottom; }
+header .header .hl { float: left; }
+header .header .hl h1 { float: left; padding-top: 10px; height: 100%; margin-right: 20px; }
+header .header .hl h1 img { float: left; }
+header .header .hl h1 .logo2,
+header .header .hl h1 .logo3 { display: none; }
+header .header .hl nav { float: left; height: 100%; }
+header .header .hl nav li { float: left; height: 70px; }
+header .header .hl nav li.put { position: relative; }
+header .header .hl nav li .a { float: left; padding: 20px 15px; font: 16px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #fff; position: relative; z-index: 2; }
+header .header .hl nav li .a:hover, header .header .hl nav li .aon { background-color: rgba(0,0,0,0.15); }
+header .header .hl nav li.put a { background: url(http://img1.lotour.com/2016/index/pt.png) no-repeat; background-position: 49px 8px; padding-right: 25px; }
+header .header .hl nav li.put a:hover { color: #fff; background: url(http://img1.lotour.com/2016/index/pt.png) no-repeat; background-position: 49px 8px; }
+header .header .hl nav li .ly { display: none; font: 12px/28px \5b8b\4f53; color: #fff; width: 72px; position: absolute; right: 0; top: 0px; z-index: 1; }
+header .header .hl nav li .ly .edbr { }
+header .header .hl nav li .ly em { display: block; width: 100%; height: 70px; background: rgba(0,0,0,0.15)!important; float: right; }
+header .header .hl nav li .ly a { display: block; float: right; width: 100%; height: 28px; color: #fff; font: 12px/28px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; text-align: center; background: url(http://img1.lotour.com/2016/index/navbg-s.png) repeat-x 0 top rgba(0,0,0,0.15); text-decoration: none; padding-right: 0; }
+header .header .hl nav li .ly a:hover { background: rgba(0,0,0,0.3)!important; }
+header .header .hl nav li.show .ly { display: block; }
+header .header .hr { float: right; }
+header .header .hr .login { float: right; font: 12px/20px \5b8b\4f53; color: #fff; margin-top: 26px; }
+header .header .hr .login a { font: 12px/20px \5b8b\4f53; color: #fff; }
+header .header .hr .login a:hover { color: #ff860d; }
+header .header .hr .third-lg { float: right; width: 90px; margin-top: 24px; }
+header .header .hr .third-lg a { opacity: 0.5; }
+header .header .hr .third-lg a:hover { opacity: 0.8; }
+header .header .hr .third-lg a.wechat { display: block; float: left; width: 24px; height: 24px; background: url(http://img1.lotour.com/2016/index/hdico.png) no-repeat 0px 0px; margin-right: 5px; }
+header .header .hr .third-lg a.weixin { display: block; float: left; width: 24px; height: 24px; background: url(http://img1.lotour.com/2016/index/hdico.png) no-repeat 0px 0px; margin-right: 5px; }
+header .header .hr .third-lg a.weibo { display: block; float: left; width: 24px; height: 24px; background: url(http://img1.lotour.com/2016/index/hdico.png) no-repeat -28px 0px; margin-right: 5px; }
+header .header .hr .third-lg a.qq { display: block; float: left; width: 24px; height: 24px; background: url(http://img1.lotour.com/2016/index/hdico.png) no-repeat -57px 0px; margin-right: 5px; }
+header .header .hr .tool { float: right; /*width:175px;*/ width: 45px; margin-top: 20px; }
+header .header .hr .tool a { opacity: 0.4; }
+header .header .hr .tool a:hover { opacity: 0.8; }
+header .header .hr .tool a.t1 { display: block; float: left; width: 31px; height: 29px; background: url(http://img1.lotour.com/2016/index/icoplus.png) no-repeat 0px 0px; margin-right: 10px; }
+header .header .hr .tool a.t2 { display: block; float: left; width: 31px; height: 29px; background: url(http://img1.lotour.com/2016/index/icoplus.png) no-repeat -41px 0px; margin-right: 10px; }
+header .header .hr .tool a.t3 { display: block; float: left; width: 31px; height: 29px; background: url(http://img1.lotour.com/2016/index/icoplus.png) no-repeat -82px 0px; margin-right: 10px; }
+header .header .hr .tool a.t4 { display: block; float: left; width: 31px; height: 29px; background: url(http://img1.lotour.com/2016/index/icoplus.png) no-repeat -122px 0px; margin-right: 10px; }
+header .header .hr .tool .t3-layer { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: none; text-align: center; }
+header .header .hr .tool .t3-layer img { top: 100px; position: relative; }
+header .header .hr .tool .t3-layer a{ width:35px;height:35px; position:absolute; left:50%; margin-left:330px;top:25px; display:block;opacity:0.3; background:#fff }
+header .header .hr .tool .t3-layer a:hover { opacity:0}
+header .header .hr .tool .t3-layeron img { top: 100px; width: auto; animation: fuck1 0.3s; width:780px; height:433px; }
+
+@keyframes fuck1 {
+    0% { width: 0; }
+    80% { width: 900px; }
+    100% { width: 820px; }
+}
+
+header .header .hr .search { float: right; position: relative; margin-right: 15px; margin-top: 13px; }
+header .header .hr .noIndexS{margin-top: 16px;}
+header .header .hr .search .txt {background: transparent;width: 190px;height: 15px;padding: 10px;font: 12px/15px \5b8b\4f53;color: #fff;border: 1px solid #fff;border-radius: 5px;opacity: .6;}
+header .header .hr .search .btn { position: absolute; width: 35px; height: 35px; top: 0px; right: 5px; background: url(http://img1.lotour.net/index/sprite_24.png) no-repeat -63px 8px; border: 0 none; cursor: pointer; }
+header .header .hr .search .src-ly { position: absolute; top: 35px; left: 0px; width: 210px; height: auto; background: rgba(255,255,255,0.8)!important; background: #fff; display: none; border-radius: 5px; }
+header .header .hr .search .src-ly .in { padding: 10px 13px 0; }
+header .header .hr .search .src-ly h6 { font: 12px/22px \5b8b\4f53; color: #333; border-bottom: 1px solid #d0d0d0; padding-left: 20px; margin-bottom: 5px; }
+header .header .hr .search .src-ly h6.h1 { background: url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 2px; }
+header .header .hr .search .src-ly h6.h2 { background: url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 -20px; }
+header .header .hr .search .src-ly .cls { position: absolute; right: 13px; top: 13px; background: url(http://img1.lotour.net/index/srh_ly.png) no-repeat 0 -48px; width: 14px; height: 14px; }
+header .header .hr .search .src-ly ul { margin-bottom: 10px; }
+header .header .hr .search .src-ly li { float: left; width: 61px; }
+header .header .hr .search .src-ly li.ed { width: 24px; }
+header .header .hr .search .src-ly li a { color: #666; font: 12px/25px \5b8b\4f53; }
+header .header .hr .search .src-ly li a:hover { color: #ff860d; }
+header .header .hr .search .len { position: absolute; top: 35px; left: 0px; width: 210px; background: rgba(255,255,255,0.8)!important; background: #fff; border-radius: 5px; display: none; overflow: hidden; }
+header .header .hr .search .len a { display: block; overflow: hidden; height: 30px; font: 12px/30px \5b8b\4f53; padding-left: 35px; background: url(http://img1.lotour.net/index/len.png) no-repeat; color: #333; }
+header .header .hr .search .len a:hover, header .header .hr .search .len a.hover { background-color: #FFC; }
+header .header .hr .search .len a.l1 { background-position: 5px 3px; }
+header .header .hr .search .len a.l2 { background-position: 5px -29px; }
+header .header .hr .search .len a.l3 { background-position: 5px -61px; }
+header .header .hr .search .len a.l4 { background: url(http://img1.lotour.net/index/len4.png) no-repeat 5px 3px; }
+header .header .hr .search .len #mddtj { background-position: 5px -93px; }
+header .header .hr .search .len a.l4:hover, header .header .hr .search .len a.l4.hover { background: url(http://img1.lotour.net/index/len4.png) no-repeat 5px 3px #FFC; }
+header .header .hr .lgd { float: right; margin-top: 20px; margin-right: 15px; *width:300px }
+header .header .hr .lgd li { float: right; position: relative; height: 28px; margin-left: 5px; }
+header .header .hr .lgd li a i { position: absolute; top: -3px; left: 25px; font: 12px/14px \5FAE\8F6F\96C5\9ED1; color: #fff; padding: 0 5px; border-radius: 7px; background: #ec6909; }
+header .header .hr .lgd li.t1 { width: 51px; }
+header .header .hr .lgd li.t2 { width: 49px; }
+header .header .hr .lgd li.t3 { width: 73px; }
+header .header .hr .lgd li .a { display: block; height: 28px; position: relative; z-index: 2; font: 12px/28px \5b8b\4f53; color: #fff; padding-right: 15px; overflow: hidden; background: url(http://img1.lotour.net/index/pt.png) no-repeat right 0; text-align: center; text-decoration: none; }
+header .header .hr .lgd li.t1 .a { background: none; width: 51px; text-align: center; }
+header .header .hr .lgd li.t2 .a { background-position-x: 32px; overflow: visible; }
+header .header .hr .lgd li.t3 .a { background-position-x: 55px; }
+
+
+
+header .header .hr .lgd li .ly { display: none; font: 12px/28px \5b8b\4f53; color: #fff; width: 73px; position: absolute; right: 0px; top: -20px; z-index: 1; border-radius: 5px; }
+header .header .hr .lgd li.t1 .ly { width: 51px; }
+header .header .hr .lgd li.t2 .ly { width: 100px; }
+header .header .hr .lgd li.t3 .ly { width: 73px; }
+header .header .hr .lgd li.show .ly { display: block; }
+header .header .hr .lgd li .ly em { display: block; width: 100%; height: 70px; background: rgba(0,0,0,0.15)!important; float: right; }
+header .header .hr .lgd li.t1 .ly em { width: 51px; }
+header .header .hr .lgd li.t2 .ly em { width: 49px; }
+header .header .hr .lgd li.t3 .ly em { width: 73px; }
+header .header .hr .lgd li .ly a { display: block; float: right; width: 100%; height: 28px; color: #fff; font: 12px/28px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; text-align: center; background: url(http://img1.lotour.com/2016/index/navbg-s.png) repeat-x 0 top rgba(0,0,0,0.15); text-decoration: none; padding-right: 0; }
+header .header .hr .lgd li .ly a:hover { background: rgba(0,0,0,0.3)!important; }
+header .header .hr .lgd li.t2 .ly a { text-align: left; text-indent: 10px; position: relative; }
+header .header .hr .lgd li.t2 .ly a i { text-align: center; text-indent: 0px; top: 7px; left: 62px; background: #999; border-radius: 0; }
+header .header .hr .lgd li .ly .edbr { border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+header .header .hr .lgd li .ly .tpbr { border-top-left-radius: 5px; }
+#mytijiao { position: absolute; bottom: -40px; left: 55px; display: block; padding-left: 10px; width: 90px; height: 30px; text-align: center; line-height: 30px; background-color: rgba(255,255,255,.8); border-radius: 5px; background-image: url(http://img1.lotour.com/index/dui.png); background-repeat: no-repeat; background-position: 10px 10px; background-color: #fff\9; /* IE6/7/8的hack*/ }
+
+.wapleft { display: none; }
+.wapmask { display: none; }
+
+.idx-friend-bg { }
+.idx-friend { width: 1200px; margin: 0 auto; padding: 50px 0 75px; }
+.idx-friend section { text-align: center; margin-bottom: 70px; }
+.idx-friend section i { font: italic 18px/50px arial; color: #333; }
+.idx-friend section h5 { font: italic 36px/50px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; }
+.idx-friend section p { display: none; }
+.idx-friend .fl { float: left; width: 720px; }
+.idx-friend .fl .bb h6 { font: 22px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; margin-bottom: 5px; }
+.idx-friend .fl .bb h6 .join { display: inline-block; width: 77px; height: 14px; margin: 20px 0 0 15px; background: url(http://img1.lotour.com/index/join.png) no-repeat 0 0; }
+.idx-friend .fl .bb h6 .join:hover { background-position: 0 -27px; }
+.idx-friend .fl .bb h6 a { color: #333; }
+.idx-friend .fl .bb h6 a:hover { color: #ec6909; }
+.idx-friend .fl .bb ul { margin-bottom: 30px; }
+.idx-friend .fl .bb ul li { float: left; width: 180px; overflow: hidden; height: 31px; font: 14px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; }
+.idx-friend .fl .bb ul li a { font: 14px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; }
+.idx-friend .fl .bb ul li a:hover { color: #ec6909; }
+.idx-friend .fl .bb ul li.log-join a { color: #ff9900; }
+.idx-friend .fl .bb ul li.log-join a:hover { color: #ec6909; }
+.idx-friend .fl .bb ul li.log-join a span { color: #999; margin: 0 3px; }
+.idx-friend .fl .bb .button { display: none; }
+.idx-friend .fl .ff { margin-bottom: 20px; }
+.idx-friend .fl .ff h6 { font: 22px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; margin-bottom: 30px; }
+.idx-friend .fl .ff h6 .join { display: inline-block; width: 77px; height: 14px; margin: 20px 0 0 15px; background: url(http://img1.lotour.com/index/join.png) no-repeat 0 0; }
+.idx-friend .fl .ff h6 .join:hover { background-position: 0 -27px; }
+.idx-friend .fl .ff h6 a { color: #333; }
+.idx-friend .fl .ff h6 a:hover { color: #ec6909; }
+.idx-friend .fl .ff ul li { float: left; width: 340px; display: inline; margin-bottom: 30px; }
+.idx-friend .fl .ff ul li img { border-radius: 100%; width: 60px; height: 60px; float: left; margin-right: 15px; }
+.idx-friend .fl .ff ul li img:hover { box-shadow: 0 0 10px #ec6909; }
+.idx-friend .fl .ff ul li h5 { height: 34px; overflow: hidden; }
+.idx-friend .fl .ff ul li h5 a { font: 20px/34px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; }
+.idx-friend .fl .ff ul li p { font: 12px/20px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #999; }
+.idx-friend .fl .ff ul li p span { font: 12px/20px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #fe7930; }
+.idx-friend .fl .ff ul li.more { width: 110px; margin-right: 0px; padding-top: 20px; }
+.idx-friend .fl .ff ul li.more a { font: 14px/35px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #333; }
+.idx-friend .fl .ff ul li.more a:hover { color: #ec6909; }
+.idx-friend .fl .ff .button { width: 220px; height: 50px; font: 24px/50px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; border: 2px solid #ff860d; color: #ff860d; margin: 0 auto; display: none; border-radius: 5px; position: relative; left: 25px; cursor: pointer; text-align: center; }
+.idx-friend .fl .ff .button:hover { animation: color2 0.5s linear; -webkit-animation: color2 0.5s linear; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; }
+
+
+.idx-friend .fl .lg-btn { margin-bottom: 30px; }
+.idx-friend .fl .lg-btn .left { float: left; margin-left: 100px; }
+.idx-friend .fl .lg-btn .left a { width: 162px; height: 35px; display: block; border: 1px solid #d3d3d3; font: 16px/35px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #969696; text-align: center; background: #fff; border-radius: 3px; }
+.idx-friend .fl .lg-btn .left a span { color: #ff860d; }
+.idx-friend .fl .lg-btn .left a:hover { background: #eeeeee; }
+.idx-friend .fl .lg-btn .left p { font: 12px/30px 宋体; color: #999; text-align: center; }
+.idx-friend .fl .lg-btn .right { float: left; margin-left: 115px; }
+.idx-friend .fl .lg-btn .right a { width: 162px; height: 35px; display: block; border: 1px solid #d3d3d3; font: 16px/35px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #969696; text-align: center; background: #fff; border-radius: 3px; }
+.idx-friend .fl .lg-btn .right a:hover { background: #eeeeee; }
+.idx-friend .fl .lg-btn .right a span { color: #ff860d; }
+.idx-friend .fl .lg-btn .right p { font: 12px/30px 宋体; color: #999; text-align: center; }
+
+
+
+.idx-friend .fr { float: right; width: 450px; }
+.idx-friend .fr h6 { font: 22px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #adadad; margin-bottom: 0px; }
+.idx-friend .fr h6 a { font: 22px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; color: #adadad; display: inline-block; }
+.idx-friend .fr h6 a:hover, .idx-friend .fr h6 a.on { color: #333; }
+.idx-friend .fr h6 span { font: 22px/30px \5B8B\4F53; margin: 0 10px; display: inline-block; }
+
+.idx-friend .fr ul { padding-bottom: 20px; padding-top: 20px; display: none; }
+.idx-friend .fr ul.on { display: block; }
+.idx-friend .fr ul li { overflow: hidden; }
+.idx-friend .fr ul li.bt { margin-bottom: 150px; }
+.idx-friend .fr ul li .lt { float: left; max-width: 380px;height:38px }
+.idx-friend .fr ul li .lt .tt { color: #333; font: 16px/38px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; }
+.idx-friend .fr ul li .lt .tt:hover { color: #ec6909; }
+.idx-friend .fr ul li .lt .at { color: #999; font: 12px/38px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; padding-left: 10px; }
+.idx-friend .fr ul li .sn { color: #999; font: 12px/33px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei"; float: right; width: 52px; margin-left: 10px; background: url(http://img1.lotour.com/index/seen.png) no-repeat left center; padding-left: 15px; margin-top: 5px; overflow:hidden;max-height: 33px;}
+
+/*导航-专栏入口*/
+.zhuanl-dh{float:right;width:200px}
+.zhuanl-dh .yongh{position:relative;float:left;width:73px;height:28px;margin-top:8px;margin-right:15px}
+.zhuanl-dh .yongh .a{display:block;font:12px/28px '宋体';height:28px;overflow:hidden;padding-right:15px;position:relative;text-align:center;text-decoration:none;z-index:2;background:url(http://img1.lotour.net/index/pt.png) no-repeat right 0;color:#fff}
+.zhuanl-dh .show .a{color:#fff}
+.zhuanl-dh .yongh .ly{width:73px;border-radius:5px;color:#fff;display:none;font:12px/28px '宋体';position:absolute;right:0;top:-20px;width:73px;z-index:1;}
+.zhuanl-dh .yongh .ly em{width:73px;height:70px;background:rgba(0, 0, 0, 0.15) none repeat scroll 0 0 !important;border-top-left-radius:5px;border-top-right-radius:5px;display:block;float:left;}
+.zhuanl-dh .yongh .ly a{background:rgba(0, 0, 0, 0.15) url(http://img1.lotour.com/2016/index/navbg-s.png) repeat-x scroll 0 top !important;/*border-bottom:1px solid #eda559;*/color:#fff;display:block;float:right;font:12px/28px '宋体';height:28px;position:relative;text-align:center;text-decoration:none;width:100%;}
+.zhuanl-dh .yongh .ly .edbr{border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
+.zhuanl-dh .yongh .ly a:hover{background:rgba(0,0,0,0.3)!important}
+.zhuanl-dh .fabiao{display:block;float:left;width:78px;height:28px;margin-top:8px;border-radius:5px;border:1px solid #fff;font:13px/28px '微软雅黑';color:#fff;text-align:center;overflow:hidden}
+.zhuanl-dh .fabiao .fabdazuo{display:block;color:#fff}
+.zhuanl-dh .fabiao .fabdazuo:hover{background:rgba(0,0,0,0.3);color:#fff}
+.zhuanl-dh .fabiao:hover{border:1px solid rgba(0,0,0,0.3)}
+.martop{margin-top:12px;width:auto}
+
+
+@keyframes color1 {
+    from { background: #ff860d; }
+    to { background: #ec6909; }
+}
+
+@-webkit-keyframes color1 {
+    from { background: #ff860d; }
+    to { background: #ec6909; }
+}
+
+@keyframes color2 {
+    to { background: #ff860d; border: 2px solid #ff860d; color: #fff; }
+}
+
+@-moz-keyframes color2 {
+    to { background: #ff860d; border: 2px solid #ff860d; color: #fff; }
+}
+
+@-webkit-keyframes color2 {
+    to { background: #ff860d; border: 2px solid #ff860d; color: #fff; }
+}
+
+.idx-footer-bg { background: #222430; border-bottom: 1px solid #333; }
+.idx-footer-bg .idx-footer { width: 1200px; margin: 0 auto; padding: 35px 0; }
+.idx-footer-bg .idx-footer .fl { float: left; }
+.idx-footer-bg .idx-footer .fl dl { float: left; margin-right: 80px; }
+.idx-footer-bg .idx-footer .fl dt { font: 14px/25px \5FAE\8F6F\96C5\9ED1; color: #999; }
+.idx-footer-bg .idx-footer .fl dd a { font: 14px/25px \5FAE\8F6F\96C5\9ED1; color: #666; }
+.idx-footer-bg .idx-footer .fl dd a:hover { color: #ec6909; }
+.idx-footer-bg .idx-footer .fl .hb { float: left; }
+.idx-footer-bg .idx-footer .fl .hb section { font: 14px/25px \5FAE\8F6F\96C5\9ED1; color: #999; }
+.idx-footer-bg .idx-footer .fl .hb p a { font: 14px/25px \5FAE\8F6F\96C5\9ED1; color: #666; margin-right: 15px; }
+.idx-footer-bg .idx-footer .fl .hb p a:hover { color: #ec6909; }
+.idx-footer-bg .idx-footer .fl .hb p a.all { color: #999; }
+.idx-footer-bg .idx-footer .fr { float: right; }
+.idx-footer-bg .idx-footer .fr .wechat { float: right; }
+.idx-footer-bg .idx-footer .fr .wechat section { font: 14px/22px \5FAE\8F6F\96C5\9ED1; color: #999; margin-bottom: 10px; }
+.idx-footer-bg .idx-footer .fr .wechat img { }
+.idx-footer-bg .idx-footer .fr .follow { float: right; width: 100px; margin-right: 50px; }
+.idx-footer-bg .idx-footer .fr .follow section { font: 14px/25px \5FAE\8F6F\96C5\9ED1; color: #999; margin-bottom: 10px; }
+.idx-footer-bg .idx-footer .fr .follow ul li { float: left; width: 26px; height: 26px; margin-right: 6px; margin-bottom: 6px; position: relative; }
+.idx-footer-bg .idx-footer .fr .follow ul li a { background: url(http://img1.lotour.net/index/sprite.png) no-repeat; }
+.idx-footer-bg .idx-footer .fr .follow ul li a:hover { opacity: 0.95; }
+.idx-footer-bg .idx-footer .fr .follow ul li.sina a { display: block; width: 26px; height: 26px; background-position: 0 -29px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.qzone a { display: block; width: 26px; height: 26px; background-position: -32px -29px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.renren a { display: block; width: 26px; height: 26px; background-position: -64px -29px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.qqweibo a { display: block; width: 26px; height: 26px; background-position: 0 -61px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.wechat a { display: block; width: 26px; height: 26px; background-position: -32px -61px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.wechat img { display: none; position: absolute; top: 26px; left: 0px; }
+.idx-footer-bg .idx-footer .fr .follow ul li.wechat:hover img { display: block; }
+
+/*footer { background: #222430; }
+footer .footer { width: 1200px; margin: 0 auto; height: 85px; position: relative; }
+footer .footer .logo-ft { float: left; margin: 30px 50px 0 0; }
+footer .footer p { color: #666; font: 12px/20px arial,\5b8b\4f53; margin: 25px 15px 0 0; float: left; }
+footer .footer p a { color: #666; font: 12px/20px arial,\5b8b\4f53; }
+footer .footer .wap { display: none; }
+footer .footer .pls { float: left; width: 26px; height: 34px; background: url(http://img1.lotour.net/index/sprite_24.png) no-repeat 0px -95px; margin-top: 25px; }
+footer .footer .plc { width: 146px; height: 59px; position: absolute; right: 0px; top: 13px; }
+footer .footer .wap_chat { display: none; }*/
+/*footernew*/
+.foot{width:100%;height:210px;border-bottom:1px solid #404040;background:#121c2d}
+.foot .footCont{width:1200px;height:auto;margin:0 auto}
+.footCont ul{float:left}
+.footCont ul li,.foot6 p{font:normal 14px/26px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";color:#717171}
+.footCont ul li.li-dian{background:url(http://img1.lotour.com/footernew/dian.png) no-repeat left;color:#666;padding-left:10px}
+.footCont ul li a{color:#999999}
+.footCont ul li a:hover{color:#fff}
+.footCont ul li span.f90{color:#ff9900}
+.foot1{margin-right:90px;margin-top:26px}
+.foot2{margin-right:80px;margin-top:26px}
+.foot3{margin-right:255px;margin-top:26px}
+.foot4{margin-right:30px;margin-top:26px}
+.foot4 img{margin-top:7px}
+.foot5{margin-top:57px}
+.footCont ul.foot5 li{font:normal 12px/26px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";}
+.foot5 li a{background:url(http://img1.lotour.com/footernew/footIcon.png) no-repeat left center;text-indent:20px;display:inherit}
+.foot5 li a:hover{background:url(http://img1.lotour.com/footernew/footIcon-hor.png) no-repeat left center}
+.foot5 li.wb a{background-position-y:6px}
+.foot5 li.tx a{background-position-y:-66px}
+.foot5 li.wb a:hover{background-position-y:6px}
+.foot5 li.tx a:hover{background-position-y:-66px}
+.foot5 li.wb,.foot5 li.qq{margin-bottom:10px}
+.foot6{float:right;margin-top:60px}
+footer{background:#121c2d}
+footer .footer{width:1200px;margin:0 auto;height:85px;position:relative;background-color:#121c2d}
+footer .footer .logo-ft{float:left;margin:30px 76px 0 0}
+footer .footer p{color:#999999;font:12px/20px '微软雅黑';margin:25px 15px 0 0;float:left}
+footer .footer p a{color:#999999;font:12px/20px '微软雅黑'}
+footer .footer .pls{float:left;width:26px;height:34px;background:url(http://img1.lotour.net/index/sprite_24.png) no-repeat 0px -95px;margin-top:25px}
+footer .footer .plc{width:146px;height:59px;position:absolute;right:0px;top:13px}
+footer .footer .wap_chat{display:none}
+
+/**/
+.bg-layer { background: rgba(0,0,0,0.4)!important; background: #000; filter: alpha(opacity=40); position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; z-index: 99998; display: none; }
+.lg-layer { width: 340px; background: rgba(255,255,255,0.9)!important; background: #fff; border-radius: 5px; position: absolute; left: 50%; margin-left: -170px; top: 50%; margin-top: -125px; box-shadow: 5px 5px 5px rgba(0,0,0,0.3); z-index: 99999; }
+.lg-layer .cls { width: 23px; height: 23px; position: absolute; top: 10px; right: 10px; background: url(http://img1.lotour.com/common/cls.png) no-repeat; border-radius: 100%; }
+.lg-layer .cls:hover { box-shadow: 0 0 5px #c9c9c9; }
+.lg-layer .in { padding: 80px 30px 0px; background: url(http://img1.lotour.com/common/lgtt.png) no-repeat center 45px; }
+.login-page .lg-layer .in { padding: 50px 30px 0px; background: url(http://img1.lotour.com/common/lgtt.png) no-repeat center 20px; }
+.re-layer .in { padding: 10px 30px 0px; background: none; }
+.lg-layer .in .third { overflow: hidden; height: 55px; }
+.lg-layer .in .third-out { overflow: hidden; height: auto; }
+.lg-layer .in .third li { float: left; width: 50px; height: 50px; margin: 0 26px 10px 0; }
+.lg-layer .in .third li a { display: block; width: 50px; height: 50px; background: url(http://img1.lotour.com/common/third.png) no-repeat; }
+.lg-layer .in .third li a:hover { opacity: 0.8; }
+.lg-layer .in .third li.i5 { margin-right: 0px; }
+.lg-layer .in .third li.i1 a { background-position: 0 0; }
+.lg-layer .in .third li.i2 a { background-position: -77px 0px; }
+.lg-layer .in .third li.i3 a { background-position: -153px 0px; }
+.lg-layer .in .third li.i4 a { background-position: 0px 0px; /*background-position:-230px 0px*/ }
+.lg-layer .in .third li.i5 a { background-position: -230px 0px; /*background-position:0px -60px*/ }
+.lg-layer .in .third li.i6 a { background-position: 0px -60px; /*background-position:-153px -60px*/ }
+.lg-layer .in .third li.i7 a { background-position: -153px -60px; }
+.lg-layer .in .td-btn { text-align: center; padding-top: 6px; padding-bottom: 8px; }
+.lg-layer .in .td-btn a { display: inline-block; height: 16px; font: 14px/16px \5FAE\8F6F\96C5\9ED1; color: #999; padding-right: 20px; padding-left: 5px; background: url(http://img1.lotour.com/common/lg_icon.png) no-repeat right -50px; }
+.lg-layer .in .td-btn a.o2 { background-position: right -33px; display: none; }
+.lg-layer .in .ps { height: 20px; margin-bottom: 8px; }
+.lg-layer .in .psshow { background: url(http://img1.lotour.com/common/lg_icon.png) no-repeat 0px -68px; padding-left: 20px; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #333; }
+.lg-layer .in .ty { margin-bottom: 10px; position: relative; }
+.lg-layer .in .txt { height: 20px; padding: 7px 15px; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #999; border-radius: 5px; border: 1px solid #d7d7d7; background: #fff; }
+.lg-layer .in .tl { width: 250px; }
+.lg-layer .in .ck { float: left; width: 117px; }
+.re-layer .in .ck { width: 107px; }
+.lg-layer .in .code { float: right; width: 119px; height: 34px; border: 1px solid #d7d7d7; border-radius: 5px; cursor: pointer; }
+.lg-layer .in .wrong { border: 1px solid #ffbd7b; box-shadow: 0 0 5px #ffbd7b; }
+.lg-layer .in .tool { margin-bottom: 16px; padding-top: 6px; }
+.lg-layer .in .tool label { float: left; padding-left: 17px; font: 12px/14px \5b8b\4f53; color: #999; background: url(http://img1.lotour.com/common/lg_icon.png) no-repeat 0px 0px; cursor: pointer; }
+.lg-layer .in .tool label.on { background-position: 0px -20px; }
+.lg-layer .in .tool a { float: right; color: #fe860c; }
+.lg-layer .in .sub input { display: block; width: 280px; border: 1px solid #ff860d; height: 34px; font: 20px/34px \5FAE\8F6F\96C5\9ED1; color: #ff840e; text-align: center; background: #fff; border-radius: 5px; cursor: pointer; }
+.re-layer .sub { margin-bottom: 20px; }
+.lg-layer .in .sub input:hover { animation: colorlg 0.5s linear; -webkit-animation: colorlg 0.5s linear; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; }
+
+@keyframes colorlg {
+    to { background: #ff860d; border: 1px solid #ff860d; color: #fff; }
+}
+
+@-moz-keyframes colorlg {
+    to { background: #ff860d; border: 1px solid #ff860d; color: #fff; }
+}
+
+@-webkit-keyframes colorlg {
+    to { background: #ff860d; border: 1px solid #ff860d; color: #fff; }
+}
+
+.lg-layer .in .tip { text-align: center; color: #333; font: 14px/20px \5FAE\8F6F\96C5\9ED1; padding: 20px 0 15px; }
+.lg-layer .in .tip a { color: #ff860d; font: 14px/20px \5FAE\8F6F\96C5\9ED1; }
+.login-page .lg-layer { padding-bottom: 20px; }
+.login-page .lg-layer .tip { position: absolute; bottom: -25px; text-align: center; color: #fff; font: 14px/20px \5FAE\8F6F\96C5\9ED1; padding: 0; width: 100%; }
+.login-page .lg-layer .tip a { color: #ff860d; font: 14px/20px \5FAE\8F6F\96C5\9ED1; }
+
+.lg-tt { width: 283px; height: 88px; position: absolute; left: 50%; margin-left: -141px; top: 50%; margin-top: -250px; z-index: 1000; background: url(http://img1.lotour.com/common/tt.png) no-repeat; cursor: pointer; }
+.zl-tt { width: 220px; height: 88px; position: absolute; left: 50%; margin-left: -110px; top: 50%; margin-top: -200px; z-index: 1000; background: url(http://img1.lotour.com/common/tt_zl.png) no-repeat; cursor: pointer; }
+.lg-tt2 { width: 220px; height: 88px; position: absolute; left: 50%; margin-left: -110px; top: 50%; margin-top: -200px; z-index: 1000; background: url(http://img1.lotour.com/common/tt2.png) no-repeat; }
+.re-layer { margin-top: -125px; }
+.lg-layer .sps { position: absolute; right: 10px; top: 11px; cursor: pointer; }
+.lg-layer .ts { font: 16px/20px \5FAE\8F6F\96C5\9ED1; color: #666; padding: 20px 0 20px; }
+.lg-layer .ts span { color: #ff860d; }
+.lg-layer .resent { width: 129px; height: 36px; display: block; float: right; border: 1px solid #d7d7d7; border-radius: 5px; cursor: pointer; background-image: -webkit-linear-gradient(to bottom, #ffffff, #f2f2f2); background-image: linear-gradient(to bottom,#ffffff, #f2f2f2); color: #333; font: 14px/34px \5FAE\8F6F\96C5\9ED1; }
+.lg-layer .resent:hover, .lg-layer .resent2 { background: #f2f2f2; }
+.lg-layer .resent2 { cursor: auto; }
+.lg-layer .mailtxt { padding: 5px 0 15px; text-align: center; }
+.lg-bt { height: 300px; background: url(http://img1.lotour.net/index/hdbg.png) repeat-x 0 bottom; width: 100%; position: absolute; bottom: 0px; left: 0px; z-index: 998; }
+.lg-bt p { position: absolute; bottom: 20px; right: 30px; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #fff; }
+.lg-bt p span { color: #ff840e; }
+body.find { background-size: cover; background-position: center center; background-repeat: no-repeat; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img1.lotour.com/common/bg.jpg',sizingMethod='scale'); }
+.lg-layer .tk { font: 12px/20px \5b8b\4f53; color: #7e7d7d; }
+.lg-layer .tk a { color: #333333; text-decoration: underline; }
+
+.re-layer-a .in { padding-top: 15px; }
+.re-layer-a .sub { margin-bottom: 10px; }
+.re-layer-a .tk { margin-bottom: 15px; }
+.re-layer-a .logintxt { position: absolute; left: 0px; bottom: -30px; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #ff840e; width: 100%; text-align: center; }
+.re-layer-a .logintxt a { color: #ff840e; }
+
+.s-layer .in { padding-top: 90px; background: url(http://img1.lotour.com/common/rt.png) no-repeat center 20px; }
+.s-layer .s1 { text-align: center; font: 26px/30px \5FAE\8F6F\96C5\9ED1; color: #666; margin-bottom: 25px; }
+.s-layer .s2 { text-align: center; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #666; display: none; }
+.s-layer .tx { background: url(http://img1.lotour.com/common/tx.png) no-repeat center 20px; padding: 43px 0 45px; }
+.s-layer .tx li { float: left; width: 64px; height: 64px; margin-right: 8px; }
+.s-layer .tx li.no { margin-right: 0px; }
+.s-layer .tx li img { border: 2px solid #fff; border-radius: 100%; }
+.s-layer .tx li.hover img, .s-layer .tx li:hover img { border: 2px solid #ffb770; }
+.s-layer .s3 { text-align: center; margin-bottom: 20px; }
+.s-layer .s3 a { display: inline-block; width: 140px; height: 34px; text-align: center; font: 16px/34px \5FAE\8F6F\96C5\9ED1; color: #666; border: 1px solid #ff860d; color: #ff860d; border-radius: 5px; }
+.s-layer .s3 a:hover { animation: colorlg 0.5s linear; -webkit-animation: colorlg 0.5s linear; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; }
+.s-layer .s4 { position: absolute; left: 50%; margin-left: 90px; top: 305px; }
+.s-layer .s4 a { font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #999; }
+
+.zl-layer { width: 675px; background: rgba(255,255,255,0.9)!important; background: #fff; border-radius: 5px; position: absolute; left: 50%; margin-left: -377px; top: 50%; margin-top: -80px; box-shadow: 5px 5px 5px rgba(0,0,0,0.3); z-index: 1000; padding: 40px; }
+.zl-layer .in { padding: 0px; background: none; float: right; }
+.zl-layer .in .tool { margin-bottom: 13px; padding-top: 3px; }
+.zl-layer .yy { color: #7e7d7d; padding: 15px 0 0; }
+.zl-layer .yy a { color: #333; }
+.zl-layer .code { float: left; }
+.zl-out { height: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+.zl-out { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img1.lotour.net/common/bg.jpg',sizingMethod='scale'); }
+.pl-tips { position: absolute; font: 14px/20px \5FAE\8F6F\96C5\9ED1; color: #999; }
+
+/*footer number*/
+.fr .lt .num { font-family: "Arail"; font-size: 13px; color: #fff; background: #cacaca; display: inline-block; width: 13px; height: 15px; padding-right: 3px; line-height: 15px; text-align: center; border-radius: 2px; margin-right: 10px; letter-spacing: -2px; position: relative; top: 12px; float: left; vertical-align: middle; }
+.fr .lt .num1 { background: #ec6909; }
+.fr .lt .num2 { background: #ff9900; }
+.fr .lt .num3 { background: #9e9e9e; }
+.idx-friend .fr ul li .lt .at:hover { color: #ff8808; }
+.idx-friend .fr { width: 460px; }
+
+.idx-footer { background: #222430; }
+.footer { background: #222430; }
+/*广告*/
+.adv{position: absolute;bottom: 0px;z-index: 9;width: 100%;height:18px;}
+.adv .adv_cont{width: 1200px;height: 18px;margin: 0 auto;}
+.adv p{width:33px;height:18px;background:rgba(0,0,0,0.4);float:right;text-align:center;bottom:0;right: 370px;}
+.adv span{color:#fff;opacity:0.7;width:33px;font:12px/18px '宋体';text-align:center;display: block;}
+.index-b-list .adv p{border-radius:0 0 5px 0;}
+.index-ad-item .index-b-list li .adv p{padding:0;}
+.adv_box{position:relative;}
+
+
+
+
+@media screen and (max-width:1200px) {
+    header .header { width: 97%; }
+    .idx-friend { width: 980px; }
+    .idx-friend .fl { float: left; width: 550px; }
+    .idx-friend .fl ul li { float: left; width: 150px; }
+    .idx-friend .fl .bb ul li { width: 135px; }
+    .idx-friend .fr { float: right; width: 430px; }
+    .idx-friend .fr h6 { margin-left: 20px; }
+    .idx-friend .fr ul li { margin-left: 20px; }
+    .idx-footer-bg .idx-footer { width: 980px; }
+    footer .footer { width: 980px; }
+    .idx-friend .fr ul li .lt { max-width: 330px;}
+    .idx-friend .fr ul li .lt .tt { max-width: 255px; overflow: hidden; display: inline-block; height: 38px; float: left; }
+    .idx-friend .fr ul li .sn { margin-top: 3px; }
+    .idx-friend .fl .ff ul li { width: 275px; }
+    .idx-friend .fl .bb ul { margin-bottom: 26px; }
+    .idx-friend .fl .lg-btn .left { margin-left: 50px; }
+    .adv .adv_cont{width: 1000px;}
+    header .header .hr .lgd{margin-right:0;}
+    header .header .hl nav li .a{padding: 20px 12px;font: 15px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";}
+}
+
+@media screen and (max-width:1140px){
+    header .header .hl nav li .a{padding: 20px 12px; font:13px/30px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei";}
+}
+
+@media screen and (max-width:1100px){
+    header .header { width: 100%;}
+    header .header .hl h1{margin-right: 8px;}
+    header .header .hl nav li .a{padding: 20px 12px;}
+}
+
+@media screen and (max-width:1030px){
+    header .header { width: 100%;}
+    header .header .hl nav li .ly{width: 65px;}
+    header .header .hl nav li .a{padding: 20px 10px;}
+}
+
+
+@media screen and (max-width:980px){
+    header .header .hl nav li .a{padding: 20px 10px;}
+    header .header .hr{width:160px;}
+    header .header .hr .search .src-ly{width:205px;}
+    header .header .hr .search{right: 148px;top: -48px;}
+    header .header .hl nav li.put a{padding-right:17px;}
+    header .header .hl nav li .ly{ width: 60px;}
+}
