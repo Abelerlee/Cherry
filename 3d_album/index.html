@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body style="overflow: hidden">
+		<div class="stage" id="stage">
+			<img src="img/1.jpg" alt="" />
+			<img src="img/2.jpg" alt="" />
+			<img src="img/3.jpg" alt="" />
+			<img src="img/4.jpg" alt="" />
+			<img src="img/5.jpg" alt="" />
+			<img src="img/6.jpg" alt="" />
+			<img src="img/7.jpg" alt="" />
+			<img src="img/8.jpg" alt="" />
+			<img src="img/9.jpg" alt="" />
+			<img src="img/10.jpg" alt="" />
+			<img src="img/11.jpg" alt="" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var stage = document.getElementById("stage");
+		var imgs = document.getElementsByTagName("img");
+		var imgsLength = imgs.length;
+		var degY = 360/imgsLength;
+		var stepX = 0;
+		var stepY = 0;
+		var rotX = 0;
+		var rotY = 0;
+		var timer = null;
+		for(var i = 0; i < imgsLength;i++){
+			var str = "rotateY("+degY*i+"deg) translateZ(300px)";
+			cssTransform(imgs[i],str);
+		}
+		document.ondragstart = function(){
+			return false;
+		}
+		document.onmousedown = function(e){
+			clearInterval(timer)
+			var mouX = e.clientX;
+			var mouY = e.clientY;
+			document.onmousemove = function(e){
+				var mouseX = e.clientX;
+				var mouseY = e.clientY;
+				stepX = mouseX - mouX;
+				stepY = mouseY - mouY;
+				console.log("stepX:"+stepX);
+				rotX -= stepY*0.2;
+				rotY += stepX*0.1;
+				var str = "perspective(800px) rotateX(-30deg) rotateX("+rotX+"deg) rotateY("+rotY+"deg)"
+				cssTransform(stage,str);
+				mouX = mouseX;
+				mouY = mouseY;
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+				autoPlay()
+			}
+		};
+
+		function cssTransform(ele,value){
+			var data = ["o","ms","moz","webkit",""];
+			var length = data.length;
+			for(var i = 0;i<length;i++){
+				ele.style[data[i]+"Transform"] = value;
+			}
+		}
+		autoPlay();
+		function autoPlay(){
+			timer = setInterval(function(){
+				rotY += 0.5;
+				var str = "perspective(800px) rotateX(-30deg) rotateX("+rotX+"deg) rotateY("+rotY+"deg)"
+				cssTransform(stage,str);
+			},30)
+		}
+
+
+
+
+	</script>
+</html>

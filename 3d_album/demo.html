@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@charset "utf-8";
+			*{padding: 0;margin: 0;}
+			body{background-color: #000;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;}
+			.stage{
+				width: 133px;
+				height: 200px;
+				border: 1px solid #f66;
+				margin:249px auto;
+				position: relative;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+
+				-webkit-perspective: 500px;
+				perspective:500px;
+
+				/*perspective-origin:  100% 50%;*/
+
+
+			}
+			.stage img{
+				left:0;
+				top:0;
+				position: absolute;
+				transform-origin:  50%;
+
+			}
+
+			.stage img:nth-child(1){
+				transform: translate3d(0,0,0);
+
+			}
+			.stage img:nth-child(2){
+				 transform:rotateY(50deg) translateZ(-350px)  ;
+
+			 }
+			.stage img:nth-child(3){
+				transform: translate3d(0,0,-500px);
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="stage" id="stage">
+			<img src="img/1.jpg" alt="" />
+			<img src="img/2.jpg" alt="" />
+			<img src="img/3.jpg" alt="" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oStage = document.getElementById("stage")
+
+		var prevX =0;
+		var prevY =0;
+		var rotateX = 0;
+		var rotateY = 0
+		oStage.ondragstart=function(){
+			return false;
+		}
+
+		oStage.onmousedown=function(ev){
+			prevX = ev.clientX;
+			prevY = ev.clientY;
+			//.clientY
+			document.onmousemove=function(ev){
+				/*当鼠标移动的时候，需要知道鼠标本次移动的距离*/
+
+				/*鼠标上次坐标和本次鼠标的坐标*/
+				var disX = ev.clientX - prevX;
+				var disY = ev.clientY - prevY;
+
+				rotateX+= disY/5;
+				rotateY+=disX/5
+
+				/*让oStage 旋转的角度，随着鼠标移动的距离发生改变*/
+				cssTransform(oStage,"rotateY("+rotateY+"deg) rotateX("+rotateX+"deg)");
+//				/*让鼠标的 move事件结束前，把ev.clientX存在prevX里面*/
+				prevX = ev.clientX;
+				prevY = ev.clientY
+			};
+
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+			}
+
+		};
+		function cssTransform(ele,value){
+			var data = ["o","ms","moz","webkit",""];
+			var length = data.length;
+			for(var i = 0;i<length;i++){
+				ele.style[data[i]+"Transform"] = value;
+			}
+		}
+	</script>
+</html>

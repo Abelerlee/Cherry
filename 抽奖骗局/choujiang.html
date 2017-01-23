@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+#bg { position:relative; margin:0 auto; background:url(turntable-bg2.png) no-repeat center center; width:600px; height:600px;}
+#rotatepan { width:600px; height:600px;position:absolute;background:url(turntable2.png) no-repeat  center center;  transform-origin:center center; transition:3s ease;}
+#point {position:absolute;width:600px; height:600px;background:url(pointer.png) no-repeat center center; cursor:pointer }
+</style>
+
+</head>
+
+<body>
+
+<div id="bg">
+	<div id="rotatepan"></div>
+    <div id="point"></div>
+</div>
+
+
+<script>
+
+	document.getElementById('point').onclick=function(){	
+		fnRotate()
+
+	};
+	var oPan = document.getElementById('rotatepan');/*转盘*/
+	var arr = [1,2,3,4,5,6],iRote = 330,lins;
+
+	//iRote/*初始化值 330deg是0 等奖的位置，每次计算都从0 等奖开始*/
+	/*lins 实际旋转的角度，iRote只是圈数的累加*/
+	var num =0;//几等奖
+	var rot = 360/7;/*平均旋转的角度*/
+	function fnRotate() {
+		
+		iRote = parseInt(Math.random()*5+1)*360+iRote; /*生成随机的圈数*/
+		var iRand = Math.random();
+
+		/*通过随机数判断 几等奖*/
+		if(iRand<0){  //1等奖
+			lins = iRote+rot;
+			num = 1
+		} else if(iRand<0.0000001){//2等奖
+			lins = iRote+rot*2;
+			num =2
+		} else if(iRand<0.002){	//3等奖
+			lins = iRote+rot*3;
+			num = 3;
+		}else if(iRand<0.03){//4等奖
+			lins = iRote+rot*4;
+			num = 4
+		}else if(iRand<0.1){//5等奖
+			lins = iRote+rot*5;
+			num = 5
+		}else if(iRand<0.2){//6等奖
+			lins = iRote+rot*6;
+			num = 6;
+		} else{//0等奖
+			lins = iRote;
+			num = 0
+		}
+		/*让表盘旋转*/
+		oPan.style.WebkitTransform='translate3d(0,0,0) rotateZ('+lins+'deg)';
+		oPan.addEventListener('webkitTransitionEnd',testIt,false);//当旋转结束以后显示抽奖结果
+
+
+	}
+	function testIt(){
+
+		if(num){
+			alert(num+"等奖");
+		}else{
+			alert("亲，就差一点点!!!");
+		}
+
+	}
+
+
+
+</script>
+</body>
+</html>
