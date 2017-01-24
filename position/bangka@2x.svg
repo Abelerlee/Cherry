@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>绑卡</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(1.000000, 1.000000)">
+            <g id="Group-2">
+                <circle id="Oval-Copy-4" stroke="#E3E3E3" stroke-width="2" fill="#8F96FF" cx="42" cy="42" r="42"></circle>
+                <g id="Page-1-Copy-2" transform="translate(18.000000, 27.000000)" fill="#FFFFFF">
+                    <path d="M0.514265242,2.09835888 C0.514265242,0.940072968 1.49332236,-6.6e-05 2.69961587,-6.6e-05 L44.9424248,-6.6e-05 C46.1493443,-6.6e-05 47.1284014,0.940072968 47.1284014,2.09835888 L47.1284014,8.39549274 L0.514265242,8.39549274 L0.514265242,2.09835888 Z M4.8855925,22.3885038 L26.7347168,22.3885038 L26.7347168,20.2900789 L4.8855925,20.2900789 L4.8855925,22.3885038 Z M4.8849665,26.586593 L13.624491,26.586593 L13.624491,24.4881681 L4.8849665,24.4881681 L4.8849665,26.586593 Z M44.9424248,30.785302 L2.69961587,30.785302 C1.49332236,30.785302 0.514265242,29.845163 0.514265242,28.6856376 L0.514265242,12.593582 L47.1284014,12.593582 L47.1284014,28.6856376 C47.1284014,29.845163 46.1493443,30.785302 44.9424248,30.785302 L44.9424248,30.785302 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
