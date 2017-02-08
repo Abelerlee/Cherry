@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>数组去重 方法一</title>
+    </head>
+    <body>
+        <div id="app">
+            
+        </div>
+        <script type="text/javascript">
+            var oDiv= document.getElementById("app");
+
+            var arr1= [1,2,2,3,4,6,7,7,9,9];
+            unique(arr1);
+            oDiv.innerHTML = unique(arr1);
+
+            function unique(arr){
+                var mn= [];
+                for(var i=0; i<arr.length; i++){
+                    if(mn.indexOf(arr[i]) == -1){
+                        mn.push(arr[i]);
+                    }
+                }
+                return mn;
+            }
+        </script>
+    </body>
+</html>

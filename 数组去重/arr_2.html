@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>数组去重 方法一</title>
+    </head>
+    <body>
+        <div id="app">
+            
+        </div>
+        <script type="text/javascript">
+            var oDiv= document.getElementById("app");
+
+            var arr= [1,2,2,3,4,6,7,7,9,9];
+            unique1(arr);
+            unique2(arr)
+            oDiv.innerHTML = unique2(arr);
+
+            function unique1(array){
+                var mn= [];
+                for(var i=0; i<array.length; i++){
+                    if(mn.indexOf(array[i]) == -1){
+                        mn.push(array[i]);
+                    }
+                }
+                return mn;
+            };
+
+            function unique2(array){
+                var n = {};
+                var mn = [];
+                var len = array.length;
+                var val = null;
+                var type = null;
+                for(var i=0; i<len; i++){
+                    val = array[i];
+                    console.log(val);
+                    type = typeof val;
+                    console.log(type);
+                    if(!n[val]){
+                        n[val] = [type]; 
+                        console.log(n);
+                        mn.push(val);
+                    }else if(n[val].indexOf(type)<0){
+                        n[val].push(type); 
+                        console.log(n);
+                        mn.push(val); 
+                    }
+                }
+                return mn;
+            }
+        </script>
+    </body>
+</html>  
