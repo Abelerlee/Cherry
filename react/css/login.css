@@ -1,0 +1,20 @@
+.login-cont { text-align: center}
+.select-item {margin: 20px 0;}
+
+.textInput,button { width: 70%;ime-mode:disabled;-webkit-ime-mode:disabled;/*禁止输入法*/
+    border: 1px solid #cccccc; height: 40px; line-height: 40px; margin: 10px auto;}
+
+.radio-wrap { display: inline-block; height: 22px; line-height: 22px;}
+.radio {
+    display: inline-block;
+    margin: 0 10px;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    background: url("../images/select1.png") no-repeat center;
+    background-size: 100% auto;
+}
+.radio-text {display: inline-block; height: 22px; }
+.selected .radio{
+    background-image: url("../images/select2.png");
+}

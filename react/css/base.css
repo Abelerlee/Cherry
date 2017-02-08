@@ -1,0 +1,115 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+img {
+  border: 0;
+  vertical-align: top; }
+
+li {
+  list-style: none; }
+
+input, textarea {
+  border: none;
+  background: none;
+  appearance: none;outline:none }
+
+input, textarea, select {
+  border: 0;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+button, input[type="submit"] {
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none; }
+textarea {resize:none}
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+textarea::-moz-focus-inner{
+
+  border: 0;
+  padding: 0;
+}
+
+a:focus,input:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  /*-webkit-user-modify:read-write-plaintext-only;*/
+}
+button,input{-webkit-appearance:none;}
+
+a{touch-callout:none;text-decoration:none;}
+textarea {resize:none}
+i, em {
+  font-style: normal; }
+textarea {
+  resize: none; }
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+textarea::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+html, body {
+  font-size: 12px;
+  -webkit-text-size-adjust: none; }
+
+body, html, .page,#app {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  color: #333333; }
+#app { position: absolute; top: 0; left: 0; bottom: 0; min-height: 450px;/*防止底部被浏览器输入框推走*/}
+
+@media only screen and (min-width: 280px) {
+  body {
+    font-size: 10px !important; } }
+
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: 12px !important; } }
+
+@media only screen and (min-width: 380px) {
+  body {
+    font-size: 14px !important; } }
+
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 16px !important; } }
+
+
+.ovfl-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+.ovfl-ellipsis2 {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical }
+
+::-webkit-input-placeholder {
+  color: #999; }
+
+:-moz-placeholder {
+  color: #999; }
+
+::-moz-placeholder {
+  color: #999; }
+
+:-ms-input-placeholder {
+  color: #999; }
+

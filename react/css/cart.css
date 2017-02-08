@@ -1,0 +1,24 @@
+.cart-tit {position: absolute; overflow: hidden; width: 100%;
+    height: 50px; line-height: 50px; top: 50px; left: 0; background-color: #ccc; }
+
+.cart-cont { top: 100px;}
+.scroll-wrap  {position: absolute; overflow: hidden; width: 100%;
+    height: 100%; top: 0px; left: 0;background-color: #fff;}
+.scroller{ position: absolute; top: 0; left: 0; width: 100%;
+     min-height: 100px}
+.cart-empty { text-align: center; line-height: 50px; font-size: 20px;}
+.cart-cont ul { overflow: hidden}
+.cart-cont .item { padding: 10px; height: 110px; border-bottom: 1px solid #ccc}
+.cart-cont  img { width: 90px; height: 90px; float: left;}
+.cart-cont .item-cont { float: left; margin: 0 6px; line-height: 20px;
+    width: -webkit-calc(100% - (90px + 60px));
+    width: calc(100% - (90px + 60px) );}
+.cart-cont .item-name { height: 40px}
+.cart-cont .item-num {}
+.cart-cont .item-price {}
+.cart-cont .item-delete { float: right; text-align: center;line-height: 60px; margin-right: -6px;  width: 40px;}
+.calc-num { height:30px; /*position: absolute; top: 100px; left: 0;*/ }
+.calc-num .button { text-align:center;width: 28px; line-height: 22px; display: inline-block;
+    background-color: #666; border-radius: 4px; color: #fff}
+.calc-num  input { border: 1px solid #eee;border-radius: 4px;line-height: 22px; height: 20px;
+    width: 34px; box-shadow: inset 1px 1px 1px rgba(0,0,0,.6);text-align: center;}

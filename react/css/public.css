@@ -1,0 +1,108 @@
+html,body,#app { height: 100%; overflow: hidden; font-size: 12px;}
+#app { position: absolute; top: 0; left: 0; width: 100%;}
+header { position: absolute; left: 0; top:0; line-height: 50px; color: #fff;
+    font-size: 24px; text-align: center; height: 50px;background-color: #666;
+    width: 100%; border-bottom: 1px solid #ccc}
+a { color: #fff}
+
+
+header .empty { float: left; width: 16%; height: 100% }
+.header-tit {float: left; width: 67% }
+header a { display: block}
+
+
+
+footer { position: absolute; left: 0; bottom:0;line-height: 50px;
+  text-align: center; height: 50px;background-color: #484850;
+    width: 100%;border-top: 1px solid #ccc; border-top: 1px solid #636363;
+    box-shadow: 0 0 1px rgba(0,0,0,.6)}
+footer ul { height: 100%}
+footer li { float: left; width: 20%; padding: 5px; text-align: center; color: #fff; line-height: 1.3;}
+.iconfont { font-size: 20px;}
+footer a { display: block; height: 100%; color: #fff }
+footer .active { border-top: 3px solid #d71110;}
+
+.content { position: absolute; overflow: hidden;
+    width: 100%; top: 50px; bottom: 50px; left: 0; }
+
+
+
+
+
+
+
+.itemRemove {
+    overflow: hidden;
+    -webkit-animation:removeItem .6s both cubic-bezier(.24,.01,.38,.97);
+    animation: removeItem .6s both cubic-bezier(.24,.01,.38,.97)}
+@-webkit-keyframes removeItem{
+    0% {
+        opacity: 1;
+
+    }
+    80%{
+
+
+        opacity: 0;
+
+    }
+    95%{
+
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        height: 0;
+
+    }
+    100% {
+
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        height: 0;
+    }
+}
+@keyframes removeItem{
+    0% {
+        opacity: 1;
+
+    }
+    80%{
+
+
+        opacity: 0;
+
+
+    }
+    95%{
+
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        height: 0;
+
+    }
+    100% {
+
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        height: 0;
+    }
+}

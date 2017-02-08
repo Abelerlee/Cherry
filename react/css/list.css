@@ -1,0 +1,27 @@
+
+
+.proList-cont { top: 80px;}
+#scroll-wrap,.scroller-wrap  {position: absolute; overflow: hidden; width: 100%; height: 100%; top: 0px; left: 0;}
+#scroller { position: absolute; top: 0; left: 0; width: 100%; background-color: #fff; min-height: 100px}
+#scroller ul{ padding: 10px; }
+#scroller li { float: left;  font-size: 12px; width: 50%;  padding: 5px; line-height: 1.8; }
+#scroller li img { width: 100%; height: 50vw;}
+#scroller li p { overflow: hidden;color: #333}
+#scroller li p strong { display: block; overflow: hidden; white-space: nowrap; width: 100%; text-overflow: ellipsis}
+#scroller li em { width: 50%; float: left; color: #f80; font-style: normal}
+#scroller li span { width: 50%; float: right; color: #666}
+#touch-load { position: absolute; top:15px; left: 0; width: 100%; height:40px; text-align: center}
+#touch-load img  { height: 40px; width: auto; transition: .5s;transform: rotate(180deg)}
+#touch-load.rotate img { transform: rotate(0deg)}
+
+.sort-list { position: absolute; border-bottom: 2px solid red; z-index: 3; overflow: hidden;
+    background-color: #ccc; top: 50px; height: 30px; line-height: 26px; width: 100%;}
+.sort-list li {  float: left; width: 16.66%; height: 100%;color: #333; text-align: center; position: relative}
+.sort-list .active { color: red}
+.sort-list .active:after { content:"";border: 5px solid transparent;
+    border-bottom-color: red; position: absolute; left: 50%; margin-left: -5px;bottom: 0;}
+.sort-list .iconfont {font-size: 18px;}
+
+.loading { display: none; width: 100%; height: 100%; background-color: rgba(255,255,255,.4); position: absolute; z-index: 999999; text-align: center;}
+.loading img { margin-top: 100px;}
+.show { display: block}
