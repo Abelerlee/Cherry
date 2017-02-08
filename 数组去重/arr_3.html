@@ -14,7 +14,7 @@
             var arr= [1,2,2,3,4,6,7,7,9,9];
             unique1(arr);
             unique2(arr)
-            oDiv.innerHTML = unique2(arr);
+            oDiv.innerHTML = unique3(arr);
 
             function unique1(array){
                 var mn= [];
@@ -51,7 +51,13 @@
             }
 
             function unique3(array) {
-                
+                var mn= [array[0]];
+                for (var i=1;i<array.length;i++){
+                    if(array.indexOf(array[i]) == i){
+                        mn.push(array[i]);
+                    }
+                }
+                return mn;
             }
         </script>
     </body>
